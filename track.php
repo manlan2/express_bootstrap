@@ -6,6 +6,15 @@
  * Time: 9:39 PM
  */
 ?>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title></title>
+    <?php require_once ('head-meta.php'); ?>
+    <link href="css/portal.css" rel="stylesheet" type="text/css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<?php require_once ('menu.php'); ?>
 <div id="track" class="jumbotron text-center">
     <h1>Company</h1>
     <p>We specialize in blablabla</p>
@@ -83,3 +92,7 @@ if (isset($_GET["track_no"])) {
         ?>
     </div>
 </div>
+
+<?php require_once ('footer.php'); ?>
+</body>
+</html>

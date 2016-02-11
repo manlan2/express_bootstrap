@@ -6,12 +6,21 @@
  * Time: 9:43 PM
  */
 ?>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title></title>
+    <?php require_once ('head-meta.php'); ?>
+    <link href="css/portal.css" rel="stylesheet" type="text/css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<?php require_once ('menu.php'); ?>
 <div id="pricing" class="container-fluid">
     <div class="text-center">
         <h2>Pricing</h2>
         <h4>Choose a payment plan that works for you</h4>
     </div>
-    <div class="row slideanim">
+    <div class="row">
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
@@ -71,3 +80,7 @@
         </div>
     </div>
 </div>
+
+<?php require_once ('footer.php'); ?>
+</body>
+</html>

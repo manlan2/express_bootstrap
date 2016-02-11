@@ -6,11 +6,20 @@
  * Time: 9:42 PM
  */
 ?>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title></title>
+    <?php require_once ('head-meta.php'); ?>
+    <link href="css/portal.css" rel="stylesheet" type="text/css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+<?php require_once ('menu.php'); ?>
 <div id="services" class="container-fluid text-center">
     <h2>SERVICES</h2>
     <h4>What we offer</h4>
     <br>
-    <div class="row slideanim">
+    <div class="row">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-off logo-small"></span>
             <h4>POWER</h4>
@@ -28,7 +37,7 @@
         </div>
     </div>
     <br><br>
-    <div class="row slideanim">
+    <div class="row">
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-leaf logo-small"></span>
             <h4>GREEN</h4>
@@ -46,3 +55,7 @@
         </div>
     </div>
 </div>
+
+<?php require_once ('footer.php'); ?>
+</body>
+</html>

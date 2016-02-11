@@ -6,10 +6,11 @@
  * Time: 9:43 PM
  */
 ?>
+
 <div id="portfolio" class="container-fluid text-center bg-grey">
     <h2>Portfolio</h2><br>
     <h4>What we have created</h4>
-    <div class="row text-center slideanim">
+    <div class="row text-center">
         <div class="col-sm-4">
             <div class="thumbnail">
                 <img src="paris.jpg" alt="Paris" width="400" height="300">

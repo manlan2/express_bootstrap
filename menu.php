@@ -14,19 +14,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#myPage">Logo</a>
+            <a class="navbar-brand" href="index.php">Logo</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#services">SERVICES</a></li>
-                <li><a href="#pricing">PRICING</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#member">MEMBER</a></li>
-                <li><a href="#track">TRACKING</a></li>
+                <li><a href="about.php">ABOUT</a></li>
+                <li><a href="services.php">SERVICES</a></li>
+                <li><a href="pricing.php">PRICING</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="member.php">MEMBER</a></li>
+                <li><a href="track.php">TRACKING</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>

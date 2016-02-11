@@ -13,7 +13,9 @@
     <?php require_once ('head-meta.php'); ?>
     <link href="css/portal.css" rel="stylesheet" type="text/css">
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
+
+<?php require_once ('footer.php'); ?>
 </body>
 </html>
