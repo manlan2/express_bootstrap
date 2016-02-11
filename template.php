@@ -11,11 +11,11 @@
 <head>
     <title></title>
     <?php require_once ('head-meta.php'); ?>
-    <link href="css/portal.css" rel="stylesheet" type="text/css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
-
+<div class="container-fluid">
+</div>
 <?php require_once ('footer.php'); ?>
 </body>
 </html>

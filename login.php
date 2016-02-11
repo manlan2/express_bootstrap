@@ -30,11 +30,15 @@ if(isset($_POST['user_name']) && isset($_POST['user_password'])){
     $form_password = stripslashes($user_password);
 
     if($query->senders_login_check($form_name, $form_password)){
-        $logged_in = TRUE;
+        $user_obj = $query->sender_query_user_name_obj($form_name);
         session_start();
         $_SESSION['user_name'] = $form_name;
         $_SESSION['logged_in'] = true;
-        header('Location:index-1.php');
+        $_SESSION['user_level'] = $user_obj['user_level'];
+        $_SESSION['sender_id'] = $user_obj['sender_id'];
+        $_SESSION['sender_name'] = $user_obj['sender_name'];
+        $_SESSION['sender_phone'] = $user_obj['sender_phone'];
+        header('Location:index.php');
     } else {
         ?>
         <div id="login" class="jumbotron text-center">

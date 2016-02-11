@@ -17,22 +17,15 @@
     <script src="js/order_add.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<?php require_once ('menu-1.php'); ?>
-<?php
-session_start();
-if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
-
-}else{
-    header('Location:login.php');
-}
-?>
-<div class="container" style="margin-top: 5%">
+<?php require_once ('menu.php'); ?>
+<?php session_start();?>
+<div class="container-fluid">
 <div class="show_content">
     <table class="tableAdd">
         <tr>
             <td class="tdTitle">发件人信息</td>
             <td class="tdTitle" colspan="3">
-                <input type="hidden" name="hid_user_name" id="hid_user_name" value="<?php session_start(); echo $_SESSION["user_name"]?>"/>
+                <input type="hidden" name="hid_user_name" id="hid_user_name" value="<?php echo $_SESSION["user_name"]?>"/>
                 <!--<select name="sender_id" id="sender_select" class="showName">
                     <option value="0" selected>请选择</option>
                 </select>-->
@@ -43,12 +36,12 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
             </th>
             <td>
                 <input type="hidden" name="hidDeliverID" id="hidDeliverID"/>
-                <input name="txtDeliverName" type="text" id="txtDeliverName" style="width:150px;"/>
+                <input name="txtDeliverName" type="text" id="txtDeliverName" style="width:150px;" value="<?php echo $_SESSION["sender_name"]?>"/>
             </td>
             <th><span>*</span>电话：
             </th>
             <td>
-                <input name="txtDeliverMobilePhone" type="text" id="txtDeliverMobilePhone" style="width:150px;"/>
+                <input name="txtDeliverMobilePhone" type="text" id="txtDeliverMobilePhone" style="width:150px;" value="<?php echo $_SESSION["sender_phone"]?>"/>
             </td>
         </tr>
         <!--<tr>

@@ -15,7 +15,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
-<div id="member">
+<div id="member" class="container-fluid">
     Member benefits
 </div>
 <?php require_once ('footer.php'); ?>

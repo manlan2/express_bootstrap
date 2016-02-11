@@ -13,9 +13,9 @@ function getSenders(){
         defaultSorting: 'sender_real_name ASC', //Set default sorting
         title: '发件人',
         actions: {
-            listAction: 'sender_p.php?action=get_senders_page',
-            createAction: 'sender_p.php?action=create_sender',
-            updateAction: 'sender_p.php?action=update_sender',
+            listAction: 'a_sender_p.php?action=get_senders_page',
+            createAction: 'a_sender_p.php?action=create_sender',
+            updateAction: 'a_sender_p.php?action=update_sender',
             //deleteAction: 'sender_p.php?action=del_sender'
         },//sender_id, sender_name, sender_phone, sender_address, sender_notes, sender_real_name
         fields: {

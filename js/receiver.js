@@ -11,7 +11,7 @@ $(document).ready(function () {
         });
     });
 
-    $.getJSON("receiver_p.php", {action: "get_senders"}, function (data) {
+    $.getJSON("a_receiver_p.php", {action: "get_senders"}, function (data) {
         $.each(data.Records, function (key, val) {
             $('#senders_name').append($("<option/>", {
                 value: val.sender_id,
@@ -34,10 +34,10 @@ function getReceivers() {
         defaultSorting: 'receiver_name ASC', //Set default sorting
         title: '收件人',
         actions: {
-            listAction: 'receiver_p.php?action=get_receivers_page',
-            createAction: 'receiver_p.php?action=create_receiver',
-            updateAction: 'receiver_p.php?action=update_receiver',
-            deleteAction: 'receiver_p.php?action=del_receiver'
+            listAction: 'a_receiver_p.php?action=get_receivers_page',
+            createAction: 'a_receiver_p.php?action=create_receiver',
+            updateAction: 'a_receiver_p.php?action=update_receiver',
+            deleteAction: 'a_receiver_p.php?action=del_receiver'
         },//receiver_id</td><td>sender_name</td><td>receiver_name</td><td>receiver_phone</td><td>receiver_address
         fields: {
             receiver_id: {

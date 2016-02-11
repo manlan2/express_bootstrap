@@ -18,15 +18,53 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="about.php">ABOUT</a></li>
-                <li><a href="services.php">SERVICES</a></li>
-                <li><a href="pricing.php">PRICING</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT <span
+                            class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.php">ABOUT</a></li>
+                        <li><a href="services.php">SERVICES</a></li>
+                        <li><a href="pricing.php">PRICING</a></li>
+                        <li><a href="member.php">MEMBER</a></li>
+                    </ul>
+                </li>
                 <li><a href="contact.php">CONTACT</a></li>
-                <li><a href="member.php">MEMBER</a></li>
-                <li><a href="track.php">TRACKING</a></li>
+                <?php
+                session_start();
+                if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">MY <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="order_new.php">NEW</a></li>
+                            <li><a href="#services">UPDATE</a></li>
+                            <li><a href="order_status.php">PRINTING</a></li>
+                            <li><a href="order_display.php">TRACKING</a></li>';
+                if (isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
+                    echo '<li><a href="#">TRACK_XYJ</a></li>
+                                <li><a href="#">NEW_XYJ</a></li>';
+                } ?>
+                <li><a href="#">PROFILE</a></li>
+            </ul>
+            </li>
+            <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 99) {
+                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="order_display.php">TRACKING</a></li>
+                                <li><a href="a_sender.php">SENDER</a></li>
+                                <li><a href="a_receiver.php">RECEIVER</a></li>
+                                <li><a href="a_product.php">PRODUCT</a></li>
+                            </ul>
+                        </li>';
+            }
+            } ?>
+            <li><a href="track.php">TRACKING</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
+                    echo '<li><a href="logout.php"><span>' . $_SESSION['user_name'] . ' </span><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
+                } else {
+                    echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                } ?>
             </ul>
         </div>
     </div>

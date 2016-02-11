@@ -53,8 +53,8 @@
         var mapProp = {
             center:myCenter,
             zoom:12,
-            scrollwheel:true,
-            draggable:true,
+            scrollwheel:false,
+            draggable:false,
             mapTypeId:google.maps.MapTypeId.ROADMAP
         };
 

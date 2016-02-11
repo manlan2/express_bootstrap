@@ -31,10 +31,10 @@ function getProducts(){
         defaultSorting: 'pro_barcode ASC', //Set default sorting
         title: '商品库',
         actions: {
-            listAction: 'product_p.php?action=get_products_page',
-            createAction: 'product_p.php?action=create_product',
-            updateAction: 'product_p.php?action=update_product',
-            deleteAction: 'product_p.php?action=del_product'
+            listAction: 'a_product_p.php?action=get_products_page',
+            createAction: 'a_product_p.php?action=create_product',
+            updateAction: 'a_product_p.php?action=update_product',
+            deleteAction: 'a_product_p.php?action=del_product'
         },//pro_id, pro_category, pro_barcode, pro_name_en, pro_name_cn, pro_order_name, pro_brand_en, pro_brand_cn, pro_weight, pro_size, pro_type, pro_note, spare
         fields: {
             pro_id: {

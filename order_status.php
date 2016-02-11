@@ -15,15 +15,7 @@
     <link href="css/add_order.css" rel="stylesheet" type="text/css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<?php require_once ('menu-1.php'); ?>
-<?php
-session_start();
-if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
-
-}else{
-    header('Location:login.php');
-}
-?>
+<?php require_once ('menu.php'); ?>
 <?php
 require_once ('./default-init.php');
 require_once('./db/db-config.php');
@@ -79,7 +71,7 @@ if (count($htmlArray)<=1) {
     $track_result['Records'] = $order_display;
 }
 ?>
-    <div id="container" style="margin-top: 2%">
+    <div class="container-fluid">
 <?php if($track_result['Result'] == 'OK'){ ?>
     <div class="display_all_orders" id="display_all_orders"><?php echo $track_result['Records'] ?></div>
 <?php }else{ ?>
