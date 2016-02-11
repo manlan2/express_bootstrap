@@ -22,11 +22,11 @@
                 <li><a href="#services">SERVICES</a></li>
                 <li><a href="#pricing">PRICING</a></li>
                 <li><a href="#contact">CONTACT</a></li>
-                <li><a href="#">MEMBER</a></li>
+                <li><a href="#member">MEMBER</a></li>
                 <li><a href="#track">TRACKING</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="#login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </div>

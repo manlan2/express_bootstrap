@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: simon
  * Date: 10/02/16
- * Time: 8:11 PM
+ * Time: 9:59 PM
  */
 ?>
 <!DOCTYPE html>
@@ -15,19 +15,7 @@
     <link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-<?php require_once ('menu.php'); ?>
-<?php require_once ('track.php'); ?>
-<!-- Container (About Section) -->
-<?php require_once ('about.php'); ?>
-<!-- Container (Services Section) -->
-<?php require_once ('services.php'); ?>
-<!-- Container (Portfolio Section) -->
-
-<!-- Container (Pricing Section) -->
-<?php require_once ('pricing.php'); ?>
-<?php require_once ('member.php'); ?>
-<!-- Container (Contact Section) -->
-<?php require_once ('contact.php'); ?>
+<?php require_once ('menu-1.php'); ?>
 <?php require_once ('login.php'); ?>
 <?php require_once ('footer.php'); ?>
 

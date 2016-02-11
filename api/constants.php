@@ -1,0 +1,75 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: simon
+ * Date: 23/12/15
+ * Time: 6:04 AM
+ */
+
+$current_url = "";
+
+$base_url = "http://localhost/express2016";
+
+//$base_url_sl = 'http://www.ctc366.com';
+
+$track_url_canada = 'http://www.ctc366.com/select/?num=';
+//http://ctc366.com/select/detail.aspx?ID=19450
+$track_xyj = "http://ex.xiyoug.com/ajax/GetTransPackorderInfo?id=";
+$track_url_china = 'http://www.ctc366.com/select/frame.aspx?KuaidiName=tiantian&OtherNum=';
+
+$url_frame = 'http://www.ctc366.com/select/frame.aspx?KuaidiName=tiantian&OtherNum=';
+
+$login_url = 'http://www.ctc366.com/index.aspx';
+$add_url = 'http://www.ctc366.com/Member/OrderAdd.aspx';//http://www.ctc366.com/Member/OrderAdd.aspx
+$edit_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.com/Member/OrderEditMember.aspx?ID=21004
+$edit_save_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.com/Member/OrderEditMember.aspx?ID=21004
+$query_url = 'http://ctc366.com/Member/OrderListMember.aspx';//所有定单
+$order_list_url = 'http://ctc366.com/Member/OrderListDcl.aspx';//待处理定单
+$print_url = 'http://ctc366.com/adminkdUser/User/OrderViewNew.aspx?ID=';
+
+$login_name  = 'tanlingcau@163.com';
+$login_password = '13579246810';
+$cookie_array = '';
+
+$button_login = '登录';
+$button_add = '创建';
+$button_edit= '保存';
+
+$login_view = '/wEPDwULLTE3NzYxMDgxNTBkZGy2Mx6f8AAasczqsBq/ARj9dyrJu5E4BLtowP3+gcy2';
+$add_view = '/wEPDwUKLTkzNzk1MTk4Mw9kFgICAw9kFgQC
+Aw8QZA8WBAIBAgICAwIEFgQQBQbmtbflj4IFATNnEAUJ5YyW5aaG5ZOBBQEyZxAFBuWltueyiQUBMWcQBQzmma7pgJrotKfniakF
+ATRnZGQCDA8QZA8WIAIBAgICAwIEAgUCBgIHAggCCQIKAgsCDAINAg4CDwIQAhECEgITAhQCFQIWAhcCGAIZAhoCGwIcAh0CHgIfAiAWIBAFCeWMl
++S6rOW4ggUJ5YyX5Lqs5biCZxAFCeWkqea0peW4ggUJ5aSp5rSl5biCZxAFCeS4iua1t+W4ggUJ5LiK5rW35biCZxAFCemHjeW6huW4ggUJ6YeN5bqG5biCZxAFCei
++veWugeecgQUJ6L695a6B55yBZxAFCeWQieael+ecgQUJ5ZCJ5p6X55yBZxAFDOm7kem+meaxn+ecgQUM6buR6b6Z5rGf55yBZxAFCeays
++WMl+ecgQUJ5rKz5YyX55yBZxAFCeWxseilv+ecgQUJ5bGx6KW/55yBZxAFCeays+WNl+ecgQUJ5rKz5Y2X55yBZxAFCeWxseS4nOecgQUJ5bGx5Lic55yBZxAFCeaxn
++iLj+ecgQUJ5rGf6IuP55yBZxAFCeWuieW+veecgQUJ5a6J5b6955yBZxAFCeaxn+ilv+ecgQUJ5rGf6KW/55yBZxAFCea1meaxn
++ecgQUJ5rWZ5rGf55yBZxAFCeemj+W7uuecgQUJ56aP5bu655yBZxAFCeW5v+S4nOecgQUJ5bm/5Lic55yBZxAFCea1t+WNl+ecgQUJ5rW35Y2X55yBZxAFCeWPsOa5vuecgQUJ5Y
++w5rm+55yBZxAFCei0teW3nuecgQUJ6LS15bee55yBZxAFCeS6keWNl+ecgQUJ5LqR5Y2X55yBZxAFCeWbm+W3neecgQUJ5Zub5bed55yBZxAFCea5luWNl
++ecgQUJ5rmW5Y2X55yBZxAFCea5luWMl+ecgQUJ5rmW5YyX55yBZxAFCemZleilv+ecgQUJ6ZmV6KW/55yBZxAFCeeUmOiCg+ecgQUJ55SY6IKD55yBZxAFCemdkua1t
++ecgQUJ6Z2S5rW355yBZxAFEuWGheiSmeWPpOiHquayu+WMugUS5YaF6JKZ5Y+k6Ieq5rK75Yy6ZxAFD+ilv+iXj+iHquayu+WMugUP6KW
+/6JeP6Ieq5rK75Yy6ZxAFGOaWsOeWhue7tOWQvuWwlOiHquayu+WMugUY5paw55aG57u05ZC+5bCU6Ieq5rK75Yy6ZxAFFeW5v+ilv
++WjruaXj+iHquayu+WMugUV5bm/6KW/5aOu5peP6Ieq5rK75Yy6ZxAFFeWugeWkj+WbnuaXj+iHquayu+WMugUV5a6B5aSP5Zue5
+peP6Ieq5rK75Yy6Z2RkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYCBQxjaGVja0RlbGl2ZXIFDWNoZWNrUmVjZWl2ZXI2unhxjphQG7a0JMYfEWhYUZ5YGAvCtQac487vCvWnBQ
+==';
+$edit_view = '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
+=';
