@@ -1,0 +1,417 @@
+.detailDel a{
+    color: #F57745;
+    cursor: pointer;
+}
+
+.detailDel a:hover {
+    color: #595959;
+}
+
+.welcome {
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+table.tableAdd {
+    width: 100%;
+    border: 1px solid #F1F0F0;
+    float: left;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+table.tableAdd tr {
+    height: 40px;
+}
+
+table.tableAdd th {
+    width: 120px;
+    border: 1px solid #F1F0F0;
+    font-weight: normal;
+    text-align: right;
+}
+
+table.tableAdd th span {
+    color: #F57745;
+}
+
+table.tableAdd td {
+    text-align: left;
+    border: 1px solid #F1F0F0;
+    padding-left: 10px;
+}
+
+table.tableAdd td b {
+    color: #F57745;
+    font-weight: normal;
+}
+
+table.tableAdd table.detailTable tr {
+    height: 30px;
+}
+
+table.tableAdd table.detailTable td {
+    padding: 0px;
+}
+
+table.tableAdd textarea {
+    height: 60px;
+    width: 400px;
+    line-height: 22px;
+}
+
+table.tableAdd select {
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+table.tableAdd input[type=text] {
+    height: 25px;
+    width: 300px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+table.tableAdd input[type=password] {
+    height: 25px;
+    width: 300px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.btnAdd {
+    border: 0px;
+    padding: 5px 20px;
+    margin-left: 180px;
+    margin-top: 20px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    background-color: #2BB7AA;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    cursor: pointer;
+}
+
+.step {
+    width: 902px;
+    border: 1px solid #DDDDDD;
+    font-weight: bold;
+    text-indent: 20px;
+    border-bottom: 0px;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+
+.step span {
+    color: #F57745;
+}
+
+#btnSelect {
+    border: 0px;
+    padding: 4px 15px;
+    margin-left: 5px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    background-color: #F57745;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#btnAll {
+    border: 0px;
+    padding: 4px 15px;
+    margin-left: 5px;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    background-color: #2BB7AA;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#btnOrderSure {
+    border: 0px;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin-top: 20px;
+    margin-left: 180px;
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei';
+    background-color: #F57745;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.page {
+    font-size: 13px;
+    height: 30px;
+    float: right;
+    margin: 20px auto 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.page a {
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+    padding: 1px 6px;
+    border: 1px solid #ccc;
+    color: #474747;
+    font-size: 12px;
+    font-weight: normal;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.page span {
+    border: 1px solid #024396;
+    font-weight: Bold;
+    color: #024396;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+    padding: 1px 6px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.partTable {
+    margin-bottom: 20px;
+}
+
+.tdTitle {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #F3F3F3;
+    position: relative;
+}
+
+.tdTitle a {
+    font-size: 14px;
+    position: absolute;
+    right: 5px;
+}
+
+.orderDetailInsert {
+    color: #F57745;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.receiverInsert {
+    color: #F57745;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.receiverSelect {
+    color: #F57745;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.show_content {
+    margin-left: 15%;
+    border: 1px solid #dddddd;
+    float: left;
+    padding: 10px;
+    width: 882px;
+}
+
+table.tableAdd table.tableDetail tr {
+    height: 35px;
+}
+
+table.tableAdd table.tableDetail td {
+    padding: 0px;
+}
+
+table.tableAdd table.tableDetail {
+    font-size: 12px;
+    float: left;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #CECECE;
+}
+
+table.tableAdd table.tableDetail tr:hover {
+    background-color: #EFEFEF;
+}
+
+table.tableAdd table.tableDetail th {
+    border: 1px solid #CECECE;
+    width: inherit;
+    background-color: #F3F3F3;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+table.tableAdd table.tableDetail td {
+    border: 1px solid #CECECE;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.hoverNo {
+    display: table-row;
+}
+
+.hoverYes {
+    display: none;
+}
+
+.LeiBie {
+    width: 170px;
+}
+
+table.tableAdd input.search_class {
+    width: 150px;
+}
+
+table.tableAdd input[type=text].MingCheng {
+    width: 150px;
+}
+
+table.tableAdd input[type=text].GuiGe {
+    width: 40px;
+}
+
+table.tableAdd input[type=text].PinPai {
+    width: 80px;
+}
+
+table.tableAdd input[type=text].ShuLiang {
+    width: 30px;
+    text-align: center;
+}
+
+table.tableAdd input[type=text].DanJia {
+    width: 40px;
+    text-align: center;
+}
+
+.DanWei {
+    width: 40px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+select.showName {
+    width: 100px;
+}
+
+select.showCity {
+    min-width: 90px;
+}
+
+.detailAdd {
+    border: 0px;
+    padding: 4px 15px;
+    cursor: pointer;
+    color: #FFF;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    background-color: #F57745;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.smart_search {
+    border: 0px;
+    padding: 4px 15px;
+    cursor: pointer;
+    color: #FFF;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    background-color: #00b800;
+    border-radius: 4px;
+}
+
+.table_search {
+    font-size: 18px;
+    font-family: 'Microsoft YaHei';
+    background-color:#F57745;
+    border-radius: 9px;
+}
+
+.order_load{
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('ajax-loader.gif')
+    50% 50%
+    no-repeat;
+}
+
+.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+}
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}

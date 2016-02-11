@@ -18,14 +18,21 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="#about">新单</a></li>
-                <li><a href="#services">改单</a></li>
-                <li><a href="#pricing">打印</a></li>
+                <li><a href="order_new.php">NEW</a></li>
+                <li><a href="#services">UPDATE</a></li>
+                <li><a href="#pricing">PRINTING</a></li>
                 <li><a href="#track">TRACKING</a></li>
                 <li><a href="#">PROFILE</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <?php
+                session_start();
+                if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
+                    echo '<li><a href="logout.php"><span>'.$_SESSION['user_name'].' </span><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
+                }else{
+                    echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
