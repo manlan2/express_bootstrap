@@ -32,7 +32,7 @@ if(isset($_SESSION['logged_in']) && $_SESSION['logged_in']){
         <tr>
             <td class="tdTitle">发件人信息</td>
             <td class="tdTitle" colspan="3">
-                <input type="hidden" name="hid_user_name" value="<?php session_start(); echo $_SESSION["user_name"]?>"/>
+                <input type="hidden" name="hid_user_name" id="hid_user_name" value="<?php session_start(); echo $_SESSION["user_name"]?>"/>
                 <!--<select name="sender_id" id="sender_select" class="showName">
                     <option value="0" selected>请选择</option>
                 </select>-->

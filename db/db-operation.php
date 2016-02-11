@@ -230,6 +230,30 @@ class express_db
         echo json_encode($result_json);
     }
 
+    public function sender_query_user_name($user_name)
+    {
+        $this->db_connect();
+        $result_json = array();
+        $sql = "SELECT sender_id, sender_name, sender_phone, sender_address, sender_notes, sender_real_name FROM EX_SENDER WHERE user_name = '" . $user_name . "'";
+        $result = $this->conn->query($sql);
+
+        //if ($result->num_rows > 0) {
+        $this->db_execute_result = true;
+        // output data of each row
+        $rows = array();
+        while ($row = $result->fetch_assoc()) {
+            $rows[] = $row;
+        }
+        $result_json['Result'] = "OK";
+        $result_json['Records'] = $rows[0];
+        //} else {
+        //    $this->db_execute_result = false;
+        //    $result_json['Result'] = "ERROR";
+        //}
+        $this->db_close();
+        echo json_encode($result_json);
+    }
+
     public function receiver_insert($sender_id, $receiver_name, $receiver_phone, $receiver_province, $receiver_city, $receiver_address)
     {
         $this->db_connect();

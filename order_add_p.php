@@ -13,6 +13,8 @@ require_once ('./api/sl_login.php');
 $query = new express_db();
 if(isset($_GET["action"]) && $_GET["action"] == "get_senders"){
     $query -> senders_query();
+}else if(isset($_GET["action"]) && $_GET["action"] == "get_sender_user_name"){
+    $query -> sender_query_user_name($_GET["user_name"]);
 }else if(isset($_GET["action"]) && $_GET["action"] == "get_receivers"){
     $query -> receivers_query_sender_id($_GET["id"]);
 }else if(isset($_GET["action"]) && $_GET["action"] == "save_receiver"){

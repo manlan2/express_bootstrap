@@ -123,10 +123,10 @@ function get_sender_detail() {
 }
 
 function get_sender_receivers(){
-    $.getJSON("order_add_p.php", {action:"get_sender", user_name:$('#hid_user_name').val()}, function (data) {
-        $('#txtDeliverName').val($('option:selected', '#sender_select').attr('sender_name'));
-        $('#txtDeliverMobilePhone').val($('option:selected', '#sender_select').attr('sender_phone'));
-        get_receivers(data.sender_id);
+    $.getJSON("order_add_p.php", {action:"get_sender_user_name", user_name:$('#hid_user_name').val()}, function (data) {
+        $('#txtDeliverName').val(data.Records.sender_name);
+        $('#txtDeliverMobilePhone').val(data.Records.sender_phone);
+        get_receivers(data.Records.sender_id);
     });
 }
 
@@ -220,12 +220,12 @@ function submit_data(){
             'txtNote':$("#txtNote").val(),
         },
         beforeSend: function() {
-            $('#order_load').show();
+            //$('#order_load').show();
         },
         success: function( resp ) {
-            $('#order_load').hide();
+            //$('#order_load').hide();
             if(resp.Result == "ERROR"){
-                show_contact();
+                //show_contact();
             }else{
                 window.location.href = "order_display.php";
                 /*$( "#dialog-confirm" ).dialog({
