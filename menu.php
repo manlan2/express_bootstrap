@@ -38,6 +38,7 @@
                             <li><a href="#">UPDATE</a></li>
                             <li><a href="order_status.php">PRINTING</a></li>
                             <li><a href="order_display.php">TRACKING</a></li>
+                            <li><a href="receiver.php">收件人</a></li>
                             <li><a href="profile.php">PROFILE</a></li>';
                 if (isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
                     echo '<li><a href="track_xyj.php">西游寄跟单</a></li>

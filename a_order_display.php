@@ -60,7 +60,17 @@ if (!count($htmlArray)) {
         $order_display .= '<td>' . $element->children(6)->innertext . '</td>';
         $order_display .= '<td>' . $element->children(7)->innertext . '</td>';
         $order_display .= '<td>' . $element->children(8)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+
+        if ($count != 1) {
+            $child_9 = $element->children(9);
+            if($child_9->innertext == ''){
+                $order_display .= '<td>在库</td>';
+            }else{
+                $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+            }
+        }else{
+            $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+        }
 
         if ($count != 1) {
             $child_10 = $element->children(10)->children(0);

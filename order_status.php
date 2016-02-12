@@ -42,17 +42,23 @@ if (count($htmlArray)<=1) {
     $order_display = '<table class="table table-bordered table-striped">';
     $count = 1;
     foreach ($htmlArray as $element) {
+
         $order_display .= '<tr>';
-        //echo '<td>' . $element->children(0)->innertext . '</td>';
         if ($count != 1) {
+            //filter data
+            $receiver_name = $element->children(4)->innertext;
+            $receiver_phone = $element->children(5)->innertext;
+            $query = new express_db();
+            session_start();
+            if(!$query -> package_query($_SESSION['sender_id'], $receiver_name, $receiver_phone)){
+                continue;
+            }
+
             $print_href = $element->children(1)->children(0)->href;
             $print_id = get_id($print_href);
             $trackNo = $element->children(1)->plaintext;
-            //var_dump($element);
             $order_display .= '<td>' . $print_id . '</td>';
             $order_display .= '<td><a target="_blank" href="./order_print.php?id=' . $print_id . '&track_id=' . $trackNo . '">' . $trackNo . '</a></td>';
-            //echo '<td><a href="http://ctc366.com' . $print_href . '">' . $trackNo . '</a></td>';
-            //<img alt="1000001477" src="http://ctc366.com/code128.aspx?num=1000001477" class="btnPrint" style="position: absolute; right: 10px; top: 5px;">
             $order_display .= '<td>' . $element->children(2)->innertext . '</td>';
         } else {
             $order_display .= '<td>' . $element->children(0)->innertext . '</td>';

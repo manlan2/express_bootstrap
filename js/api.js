@@ -1,13 +1,6 @@
 /**
  * Created by Ling on 2016-01-18.
  */
-
-$(document).ready(function () {
-    $(".php_process").click(function () {
-        $('#track_load').show();
-    });
-});
-
 function show_error( content ){
     var d = dialog({
         width: 300,

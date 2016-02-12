@@ -20,7 +20,7 @@
     <h2>修女岛快递代理点</h2>
 
     <form class="form-inline" action="track.php">
-        <input type="text" class="form-control" id="track_no" name="track_no" size="50" placeholder="请输入10位胜隆单号~" required autofocus>
+        <input type="text" class="form-control" id="track_no" name="track_no" size="50" placeholder="请输入胜隆单号~" required autofocus>
         <button type="submit" class="btn btn-danger">查询</button>
     </form>
 </div>

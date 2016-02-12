@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="js/jtable.2.4.0/themes/lightcolor/gray/jtable.min.css" type="text/css"/>
     <script src="js/jtable.2.4.0/jquery.jtable.min.js" type="text/javascript"></script>
     <script src="js/api.js"></script>
-    <script src="js/sender.js"></script>
+    <script src="js/a_sender.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>

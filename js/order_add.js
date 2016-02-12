@@ -92,7 +92,6 @@ $(document).ready(function () {
         if ($("#checkReceiver").is(':checked')) {
             save_receiver();
         }
-
         submit_data();
 
     });
@@ -206,8 +205,10 @@ function submit_data(){
         method: "POST",
         data: {
             'dropRoute': $("input[name=dropRoute]:checked").val(),//1
+            'hidDeliverID': $("#hidDeliverID").val(),
             'txtDeliverName': $("#txtDeliverName").val(),//2
             'txtDeliverMobilePhone': $("#txtDeliverMobilePhone").val(),//3
+            'hidReceiverID': $('#hidReceiverID').val(),
             'txtReceiverName': $("#txtReceiverName").val(),//4
             'txtReceiverMobilePhone': $("#txtReceiverMobilePhone").val(),//5
             'dropSheng': $('#dropSheng').val(),
@@ -225,37 +226,9 @@ function submit_data(){
         success: function( resp ) {
             //$('#order_load').hide();
             if(resp.Result == "ERROR"){
-                //show_contact();
+                show_contact();
             }else{
-                window.location.href = "order_display.php";
-                /*$( "#dialog-confirm" ).dialog({
-                 resizable: false,
-                 height:140,
-                 modal: true,
-                 buttons: {
-                 "查看定单": function() {
-                 $( this ).dialog( "close" );
-                 },
-                 Cancel: function() {
-                 $( this ).dialog( "close" );
-                 }
-                 }
-                 });*/
-
-                //resp.Records
-                /*var d = dialog({
-                 width: 300,
-                 title: '提示',
-                 content: '订单提交成功！',
-                 okValue: '查看订单',
-                 ok: function () {
-                 window.location.href = base_url + "?p=4";
-                 },
-                 cancelValue: '确定',
-                 cancel: function () {
-                 }
-                 });
-                 d.show();*/
+                window.location.href = "order_status.php";
             }
         },
         error: function() {

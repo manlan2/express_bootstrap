@@ -36,7 +36,7 @@
             <th><span>*</span>姓名：
             </th>
             <td>
-                <input type="hidden" name="hidDeliverID" id="hidDeliverID"/>
+                <input type="hidden" name="hidDeliverID" id="hidDeliverID" value="<?php echo $_SESSION["sender_id"]?>"/>
                 <input name="txtDeliverName" type="text" id="txtDeliverName" style="width:150px;" value="<?php echo $_SESSION["sender_name"]?>"/>
             </td>
             <th><span>*</span>电话：

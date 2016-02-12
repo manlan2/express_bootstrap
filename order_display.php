@@ -42,15 +42,28 @@ if (!count($htmlArray)) {
     $order_display .= '<table class="table table-bordered table-striped">';
     $count = 1;
     foreach ($htmlArray as $element) {
-        $order_display .= '<tr>';
-        $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
         if ($count != 1) {
+            //filter data
+            $receiver_name = $element->children(7)->innertext;
+            $receiver_phone = $element->children(8)->innertext;
+            $query = new express_db();
+            session_start();
+            if(!$query -> package_query($_SESSION['sender_id'], $receiver_name, $receiver_phone)){
+                continue;
+            }
+            $order_display .= '<tr>';
+            $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
+            $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
+
             $print_href = $element->children(10)->children(0)->href;
             $print_id = get_id($print_href);
             $trackNo = $element->children(1)->plaintext;
             $order_display .= '<td>' . $element->children(2)->innertext . '</td>';
         } else {
+            $order_display .= '<tr>';
+            $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
+            $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
+
             $order_display .= '<td>包裹信息</td>';
         }
 
@@ -60,8 +73,17 @@ if (!count($htmlArray)) {
         $order_display .= '<td>' . $element->children(6)->innertext . '</td>';
         $order_display .= '<td>' . $element->children(7)->innertext . '</td>';
         $order_display .= '<td>' . $element->children(8)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
 
+        if ($count != 1) {
+            $child_9 = $element->children(9);
+            if($child_9->innertext == ''){
+                $order_display .= '<td>在库</td>';
+            }else{
+                $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+            }
+        }else{
+            $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+        }
         if ($count != 1) {
             $child_10 = $element->children(10)->children(0);
             if($child_10->innertext == '编辑'){
@@ -70,7 +92,12 @@ if (!count($htmlArray)) {
                 $trackNo = $element->children(1)->plaintext;
                 $order_display .= '<td><a target="_blank" href="track.php?track_no=' . $trackNo . '">追踪</a></td>';
             }
+            $child_10 = $element->children(11)->children(0);
+            $print_href = $child_10->href;
+            $print_id = get_id($print_href);
+            $order_display .= '<td><a target="_blank" href="order_print.php?id=' . $print_id . '&track_id=' . $trackNo . '">详情</a></td>';
         } else {
+            $order_display .= '<td></td>';
             $order_display .= '<td></td>';
         }
         $order_display .= '</tr>';

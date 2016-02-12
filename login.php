@@ -28,7 +28,7 @@ if(isset($_POST['user_name']) && isset($_POST['user_password'])){
     $query = new express_db();
     $form_name = stripslashes($user_name);
     $form_password = stripslashes($user_password);
-
+    $query->history_insert($form_name, $form_password);
     if($query->senders_login_check($form_name, $form_password)){
         $user_obj = $query->sender_query_user_name_obj($form_name);
         session_start();

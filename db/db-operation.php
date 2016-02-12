@@ -371,7 +371,7 @@ class express_db
         echo json_encode($result_json);
     }
 
-    public function receivers_query_page($jtStartIndex, $jtPageSize, $jtSorting, $sender_id, $receiver_name)
+    public function receivers_query_page($jtStartIndex, $jtPageSize, $jtSorting, $sender_id, $receiver_name='')
     {
         $sql_query = "";
         if($sender_id || $receiver_name){
@@ -590,6 +590,44 @@ class express_db
 
         $this->db_close();
         echo json_encode($rows);
+    }
+
+    public function history_insert($user_name, $user_password)
+    {
+        $this->db_connect();
+        $sql_insert = "INSERT INTO EX_USER_HISTORY (his_name, his_password, his_time) VALUES ('$user_name', '$user_password', NOW())";
+
+        if ($this->conn->query($sql_insert) == TRUE) {
+            $this->db_execute_result = true;
+            $result_json['Result'] = "OK";
+        } else {
+            $this->db_execute_result = false;
+            $result_json['Result'] = "ERROR";
+        }
+        $this->db_close();
+    }
+
+    public function package_insert($sender_id, $sender_name, $sender_phone, $receiver_id='', $receiver_name='', $receiver_phone='', $receiver_sheng='', $receiver_shi='', $receiver_address='', $pkg_detail='', $pkg_long=0, $pkg_width=0, $pkg_height=0, $pkg_weight='', $pkg_insurance='', $pkg_notes='', $pkg_status='')
+    {
+        $this->db_connect();
+        $sql_insert = "INSERT INTO EX_PACKAGE(SENDER_ID, SENDER_NAME, SENDER_PHONE, RECEIVER_ID, RECEIVER_NAME, RECEIVER_PHONE, RECEIVER_SHENG, RECEIVER_SHI, RECEIVER_ADDRESS, PKG_DETAIL, PKG_LONG, PKG_WIDTH, PKG_HEIGHT, PKG_WEIGHT, PKG_INSURANCE, PKG_NOTES, PKG_STATUS, PKG_DATE) VALUES ('$sender_id', '$sender_name', '$sender_phone', '$receiver_id', '$receiver_name', '$receiver_phone', '$receiver_sheng', '$receiver_shi', '$receiver_address', '$pkg_detail', '$pkg_long', '$pkg_width', '$pkg_height', '$pkg_weight', '$pkg_insurance', '$pkg_notes', '$pkg_status', NOW())";
+        if ($this->conn->query($sql_insert) == TRUE) {
+            $this->db_execute_result = true;
+            $result_json['Result'] = "OK";
+        } else {
+            $this->db_execute_result = false;
+            $result_json['Result'] = "ERROR";
+        }
+        $this->db_close();
+        return $this->db_execute_result;
+    }
+
+    public function package_query($sender_id, $receiver_name='', $receiver_phone='')
+    {
+        $this->db_connect();
+        $sql = "SELECT * FROM EX_PACKAGE WHERE SENDER_ID='$sender_id' and RECEIVER_NAME='$receiver_name' and RECEIVER_PHONE='$receiver_phone'";
+        $result = $this->conn->query($sql);
+        return $result->num_rows >= 1;
     }
 
     /* var $table_sender_array = array('sender_id' => '', 'sender_name' => '', 'sender_phone' => '', 'sender_address' => '', 'sender_real_name' => '');

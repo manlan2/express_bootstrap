@@ -1,9 +1,29 @@
 /**
  * Created by simon on 18/01/16.
  */
-
+var senders_source = {};
 $(document).ready(function () {
-    getReceivers();
+    $('#LoadRecordsButton').click(function (e) {
+        e.preventDefault();
+        $('#receivers_div').jtable('load', {
+            receiver_name: $('#receiver_name').val().trim(),
+            sender_id: $('#senders_name').val(),
+        });
+    });
+
+    $.getJSON("a_receiver_p.php", {action: "get_senders"}, function (data) {
+        $.each(data.Records, function (key, val) {
+            $('#senders_name').append($("<option/>", {
+                value: val.sender_id,
+                text: val.sender_real_name,
+            }));
+            senders_source[val.sender_id] = val.sender_real_name;
+        });
+        getReceivers();
+
+        $('#LoadRecordsButton').click();
+    });
+
 });
 
 function getReceivers() {
@@ -14,10 +34,10 @@ function getReceivers() {
         defaultSorting: 'receiver_name ASC', //Set default sorting
         title: '收件人',
         actions: {
-            listAction: 'receiver_p.php?action=get_receivers_page',
-            createAction: 'receiver_p.php?action=create_receiver',
-            updateAction: 'receiver_p.php?action=update_receiver',
-            //deleteAction: 'receiver_p.php?action=del_receiver'
+            listAction: 'a_receiver_p.php?action=get_receivers_page',
+            createAction: 'a_receiver_p.php?action=create_receiver',
+            updateAction: 'a_receiver_p.php?action=update_receiver',
+            deleteAction: 'a_receiver_p.php?action=del_receiver'
         },//receiver_id</td><td>sender_name</td><td>receiver_name</td><td>receiver_phone</td><td>receiver_address
         fields: {
             receiver_id: {
@@ -68,15 +88,15 @@ function getReceivers() {
              edit: false,
              list: false
              },*/
-            /*sender_id: {
+            sender_id: {
                 title: '发件人',
                 options: senders_source,
                 //edit: false,
-            },*/
+            },
         }
     });
 
-    $('#receivers_div').jtable('load');
+    //$('#receivers_div').jtable('load');
 }
 
 function get_cities() {
