@@ -9,15 +9,16 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <title></title>
+    <title>修女岛快递代理点：查单</title>
     <?php require_once ('head-meta.php'); ?>
     <link href="css/portal.css" rel="stylesheet" type="text/css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
+<?php require_once ('login_check.php'); ?>
 <div id="track" class="jumbotron text-center">
-    <h1>Company</h1>
-    <p>We specialize in blablabla</p>
+    <h2>修女岛快递代理点</h2>
+
     <form class="form-inline">
         <input type="text" class="form-control" id="track_no" name="track_no" size="50" placeholder="请输入10位胜隆单号~" required autofocus>
         <button type="submit" class="btn btn-danger">查询</button>
@@ -50,7 +51,7 @@ if (isset($_GET["track_no"])) {
                     $message .= '</tr></table>';
                     $track_result['Records'] = $message;
                 }else{
-                    $message = '<table class="track_result_table">';
+                    $message = '<table class="table table-bordered">';
                     foreach ($html_array as $element) {
                         $message .=  '<tr>';
                         if ($element->children(1)) {
@@ -79,7 +80,7 @@ if (isset($_GET["track_no"])) {
     }
 }
 ?>
-<div class="track_result">
+<div class="container">
     <div class="track_result_fail" id="track_result_fail"></div>
     <div class="track_result_success" id="track_result_success">
         <?php

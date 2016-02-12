@@ -18,6 +18,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
+<?php require_once ('login_check_99.php'); ?>
 <div class="container-fluid">
     <div class="filtering">
         <form>

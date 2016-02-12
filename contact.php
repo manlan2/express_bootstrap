@@ -18,13 +18,14 @@
 <div id="contact" class="container-fluid bg-grey">
     <h2 class="text-center">CONTACT</h2>
     <div class="row">
-        <div class="col-sm-5">
-            <p>Contact us and we'll get back to you within 24 hours.</p>
-            <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-            <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        <div class="col-sm-12">
+            <p>Contact us and we'll get back to you ASAP.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Île des Sœurs, Montreal</p>
+            <p><span class="glyphicon glyphicon-phone"></span> 514-550-5767</p>
+            <p><span class="glyphicon glyphicon-send"></span> WeChat: tanling-qoma</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> panda2ici@gmail.com</p>
         </div>
-        <div class="col-sm-7">
+        <!--<div class="col-sm-7">
             <div class="row">
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
@@ -39,7 +40,7 @@
                     <button class="btn btn-default pull-right" type="submit">Send</button>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 <div id="googleMap" style="height:400px;width:100%;"></div>

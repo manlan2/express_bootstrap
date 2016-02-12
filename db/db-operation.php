@@ -143,6 +143,23 @@ class express_db
         echo json_encode($result_json);
     }
 
+    public function sender_password_update($user_name, $user_password)
+    {
+        $this->db_connect();
+        $sql = "UPDATE EX_SENDER SET user_password = '$user_password' WHERE user_name = '$user_name'";
+
+        if ($this->conn->query($sql) == true) {
+            $this->db_execute_result = true;
+            $result_json = array();
+            $result_json['Result'] = "OK";
+        } else {
+            $this->db_execute_result = false;
+            $result_json['Result'] = "ERROR";
+        }
+
+        $this->db_close();
+    }
+
     public function senders_query()
     {
         $this->db_connect();

@@ -14,17 +14,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Logo</a>
+            <a class="navbar-brand" href="index.php">Ling</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT <span
                             class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="about.php">ABOUT</a></li>
                         <li><a href="services.php">SERVICES</a></li>
                         <li><a href="pricing.php">PRICING</a></li>
                         <li><a href="member.php">MEMBER</a></li>
+                        <li><a href="about.php">ABOUT</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.php">CONTACT</a></li>
@@ -35,21 +35,22 @@
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="order_new.php">NEW</a></li>
-                            <li><a href="#services">UPDATE</a></li>
+                            <li><a href="#">UPDATE</a></li>
                             <li><a href="order_status.php">PRINTING</a></li>
-                            <li><a href="order_display.php">TRACKING</a></li>';
+                            <li><a href="order_display.php">TRACKING</a></li>
+                            <li><a href="profile.php">PROFILE</a></li>';
                 if (isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
-                    echo '<li><a href="#">TRACK_XYJ</a></li>
-                                <li><a href="#">NEW_XYJ</a></li>';
+                    echo '<li><a href="track_xyj.php">西游寄跟单</a></li>
+                                <li><a href="#">西游寄下单</a></li>';
                 } ?>
-                <li><a href="#">PROFILE</a></li>
             </ul>
             </li>
             <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 99) {
                 echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN <span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="order_display.php">TRACKING</a></li>
+                                <li><a href="a_order_display.php">TRACKING</a></li>
+                                <li><a href="a_order_status.php">MANAGING</a></li>
                                 <li><a href="a_sender.php">SENDER</a></li>
                                 <li><a href="a_receiver.php">RECEIVER</a></li>
                                 <li><a href="a_product.php">PRODUCT</a></li>

@@ -18,6 +18,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
+<?php require_once ('login_check.php'); ?>
 <?php session_start();?>
 <div class="container-fluid">
 <div class="show_content">

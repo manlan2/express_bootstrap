@@ -46,8 +46,8 @@ function getSenders(){
             sender_notes: {
                 title: '备注',
                 /*create: false,
-                 edit: false,
-                 list: false*/
+                 edit: false,*/
+                 list: false
             }
         }
     });

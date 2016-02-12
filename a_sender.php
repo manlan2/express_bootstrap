@@ -18,6 +18,7 @@
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
+<?php require_once ('login_check_99.php'); ?>
 <?php
 require_once ('./default-init.php');
 require_once( './db/db-config.php');

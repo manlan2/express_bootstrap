@@ -18,63 +18,65 @@
 <div id="pricing" class="container-fluid">
     <div class="text-center">
         <h2>Pricing</h2>
-        <h4>Choose a payment plan that works for you</h4>
     </div>
     <div class="row">
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    <h1>Basic</h1>
+                    <h1>文件证件类</h1>
                 </div>
                 <div class="panel-body">
-                    <p><strong>20</strong> Lorem</p>
-                    <p><strong>15</strong> Ipsum</p>
-                    <p><strong>5</strong> Dolor</p>
-                    <p><strong>2</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
+                    <p><strong>UPS</strong>及<strong>Fedx</strong></p>
+                    <p><strong>单周达</strong></p>
+                    <p><strong>UPS全中国范围</strong></p>
+                    <p><strong>Fedx大部分范围</strong></p>
+                    <p><strong>*需要提供收件人英文地址</strong></p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$19</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
+                    <h3>$98</h3>
+                    <h4>东三省,内蒙,西藏,青海,新疆</h4>
+                    <h3>$68</h3>
+                    <h4>其它地区</h4>
                 </div>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    <h1>Pro</h1>
+                    <h1>普通物品</h1>
                 </div>
                 <div class="panel-body">
-                    <p><strong>50</strong> Lorem</p>
-                    <p><strong>25</strong> Ipsum</p>
-                    <p><strong>10</strong> Dolor</p>
-                    <p><strong>5</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
+                    <p><strong>保健品</strong></p>
+                    <p><strong>奶粉</strong></p>
+                    <p><strong>衣物</strong></p>
+                    <p><strong>包包</strong></p>
+                    <p><strong>日常用品</strong></p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$29</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
+                    <h3>$4.88</h3>
+                    <h4>per LB</h4>
+                    <h3>特价期间</h3>
+                    <h4>PS: 1LB=12OZ</h4>
                 </div>
             </div>
         </div>
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
-                    <h1>Premium</h1>
+                    <h1>特殊物品</h1>
                 </div>
                 <div class="panel-body">
-                    <p><strong>100</strong> Lorem</p>
-                    <p><strong>50</strong> Ipsum</p>
-                    <p><strong>25</strong> Dolor</p>
-                    <p><strong>10</strong> Sit</p>
-                    <p><strong>Endless</strong> Amet</p>
+                    <p><strong>海参</strong></p>
+                    <p><strong>西洋参</strong></p>
+                    <p><strong>电子产品</strong></p>
+                    <p><strong>化妆品</strong></p>
+                    <p><strong>名贵物品</strong></p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$49</h3>
-                    <h4>per month</h4>
-                    <button class="btn btn-lg">Sign Up</button>
+                    <h3>$12</h3>
+                    <h4>参类 per LB</h4>
+                    <h3>$?</h3>
+                    <h4>其它请咨询</h4>
                 </div>
             </div>
         </div>

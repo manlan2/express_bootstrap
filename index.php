@@ -17,8 +17,8 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
 <div id="track" class="jumbotron text-center">
-    <h1>Company</h1>
-    <p>We specialize in blablabla</p>
+    <h2>修女岛快递代理点</h2>
+
     <form class="form-inline" action="track.php">
         <input type="text" class="form-control" id="track_no" name="track_no" size="50" placeholder="请输入10位胜隆单号~" required autofocus>
         <button type="submit" class="btn btn-danger">查询</button>

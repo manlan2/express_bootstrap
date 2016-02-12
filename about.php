@@ -15,13 +15,13 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
-<div id="about" class="container-fluid">
+<div id="about" class="container-fluid" style="margin-top: 2%">
     <div class="row">
         <div class="col-sm-8">
-            <h2>About Company Page</h2><br>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <br><button class="btn btn-default btn-lg">Get in Touch</button>
+            <h2>修女岛快递代理点</h2><br>
+            <h4>小站提供在线下单查单功能,下单功能目前只向<span class="label label-success">修女岛快递客户</span>开放.</h4><br>
+            <p>声明: 小站只是尽可能提供下单的便利,但由于时间原因,本人并不能100％保证网站的正常持续运作.在允许的条件下,我会继续改进网站体验.如果你有其它想法,请直接联系我~</p>
+            <br><a class="btn btn-default btn-lg" href="contact.php">Get in Touch</a>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-signal logo"></span>
@@ -34,10 +34,8 @@
             <span class="glyphicon glyphicon-globe logo"></span>
         </div>
         <div class="col-sm-8">
-            <h2>Our Values</h2><br>
-            <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-            <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h2>WHY?</h2><br>
+            <h4><strong>MISSION:</strong> 网上下单,跟单.简化下单步骤,节省大家的<span class="label label-danger">时间!时间!时间!</span></h4><br>
         </div>
     </div>
 </div>

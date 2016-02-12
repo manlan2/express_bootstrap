@@ -21,37 +21,38 @@
     <br>
     <div class="row">
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-off logo-small"></span>
-            <h4>POWER</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-plane logo-small"></span>
+            <h4>胜隆快递</h4>
+            <p>胜隆快递代理: 普货,奶粉,保健品,包包,化妆品,海参西洋参及其它</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-heart logo-small"></span>
-            <h4>LOVE</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4>防震材料</h4>
+            <p>有偿提供防震材料</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-lock logo-small"></span>
-            <h4>JOB DONE</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <h4>打包</h4>
+            <p>无偿提供咨询是必须的~另外免费打包,提供免费纸箱</p>
         </div>
     </div>
     <br><br>
     <div class="row">
+
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-leaf logo-small"></span>
-            <h4>GREEN</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-dashboard logo-small"></span>
+            <h4>UPS</h4>
+            <p>文件证件类,一周内速递</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-certificate logo-small"></span>
-            <h4>CERTIFIED</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-dashboard logo-small"></span>
+            <h4>Fedx</h4>
+            <p>文件证件类,一周内速递</p>
         </div>
         <div class="col-sm-4">
-            <span class="glyphicon glyphicon-wrench logo-small"></span>
-            <h4 style="color:#303030;">HARD WORK</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            <span class="glyphicon glyphicon-heart logo-small"></span>
+            <h4>其它</h4>
+            <p>其它的需要帮忙的联系我看看~能帮自然则帮~</p>
         </div>
     </div>
 </div>
