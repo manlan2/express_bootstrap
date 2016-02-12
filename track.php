@@ -15,7 +15,6 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
-<?php require_once ('login_check.php'); ?>
 <div id="track" class="jumbotron text-center">
     <h2>修女岛快递代理点</h2>
 
