@@ -41,12 +41,12 @@
 
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-dashboard logo-small"></span>
-            <h4>UPS</h4>
+            <h4>DHL</h4>
             <p>文件证件类,一周内速递</p>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-dashboard logo-small"></span>
-            <h4>Fedx</h4>
+            <h4>FedEx</h4>
             <p>文件证件类,一周内速递</p>
         </div>
         <div class="col-sm-4">
