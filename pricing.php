@@ -28,7 +28,7 @@
                 <div class="panel-body">
                     <p><strong>DHL</strong>及<strong>FedEx</strong></p>
                     <p><strong>单周达</strong></p>
-                    <p><strong>DHL可达绝大大部分范围</strong></p>
+                    <p><strong>DHL可达绝大部分地区</strong></p>
                     <p><strong>FedEx可达主要城市</strong></p>
                     <p><strong>*需要提供收件人英文地址</strong></p>
                 </div>
