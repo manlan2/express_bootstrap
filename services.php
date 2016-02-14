@@ -28,12 +28,12 @@
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-leaf logo-small"></span>
             <h4>防震材料</h4>
-            <p>有偿提供防震材料</p>
+            <p>有偿提供专用防震材料</p>
         </div>
         <div class="col-sm-4">
             <span class="glyphicon glyphicon-wrench logo-small"></span>
             <h4>打包</h4>
-            <p>无偿提供咨询是必须的~另外免费打包,提供免费纸箱</p>
+            <p>免费打包,免费纸箱</p>
         </div>
     </div>
     <br><br>

@@ -80,17 +80,14 @@ if (isset($_GET["track_no"])) {
 }
 ?>
 <div class="container">
-    <div class="track_result_fail" id="track_result_fail"></div>
-    <div class="track_result_success" id="track_result_success">
-        <?php
-        if (isset($_GET["track_no"])) {
-            foreach($track_result_array as $track_result){
-                echo  $track_result['Records'];
-                echo '<br>';
-            }
+    <?php
+    if (isset($_GET["track_no"])) {
+        foreach($track_result_array as $track_result){
+            echo  $track_result['Records'];
+            echo '<br>';
         }
-        ?>
-    </div>
+    }
+    ?>
 </div>
 
 <?php require_once ('footer.php'); ?>

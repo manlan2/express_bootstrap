@@ -31,14 +31,14 @@
                 }
             }
             ?>
-            <div class="input-group">
-                <span class="input-group-addon">User Info</span>
-                <label class="form-control">User Name:<span class="label label-info"><?php echo $_SESSION['user_name'] ?></span></label>
-                <label class="form-control">Phone No. :<span class="label label-info"><?php echo $_SESSION['sender_phone'] ?></span></label>
+            <div class="row">
+                <!--<span class="input-group-addon">User Info</span>-->
+                <label class="form-control" aria-describedby="basic-addon3" >User Name:<span class="label label-info"><?php echo $_SESSION['user_name'] ?></span></label>
+                <label class="form-control" aria-describedby="basic-addon3">Phone No. :<span class="label label-info"><?php echo $_SESSION['sender_phone'] ?></span></label>
             </div>
-            <label for="basic-url">New Password</label>
-            <div class="input-group">
-                <span class="input-group-addon" id="basic-addon3">Password</span>
+            <div class="row"><label for="basic-url">Change Password</label></div>
+            <div class="row">
+                <!--<span class="input-group-addon" id="basic-addon3">Password</span>-->
                 <input type="password" class="form-control" id="user_p0" name="user_p0" aria-describedby="basic-addon3" placeholder="Old Password">
                 <input type="password" class="form-control" id="user_p1" name="user_p1" aria-describedby="basic-addon3" placeholder="New Password">
                 <input type="password" class="form-control" id="user_p2" name="user_p2" aria-describedby="basic-addon3" placeholder="New Password">

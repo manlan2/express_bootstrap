@@ -22,8 +22,8 @@
             <p>Contact us and we'll get back to you ASAP.</p>
             <p><span class="glyphicon glyphicon-map-marker"></span> Île des Sœurs, Montreal</p>
             <p><span class="glyphicon glyphicon-phone"></span> 514-550-5767</p>
-            <p><span class="glyphicon glyphicon-send"></span> WeChat: tanling-qoma</p>
-            <p><span class="glyphicon glyphicon-envelope"></span> panda2ici@gmail.com</p>
+            <p><span class="glyphicon glyphicon-send"></span> 请电话联系索取更详细地址~</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:panda2ici@gmail.com">panda2ici@gmail.com</a></p>
         </div>
         <!--<div class="col-sm-7">
             <div class="row">
