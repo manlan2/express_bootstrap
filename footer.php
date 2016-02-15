@@ -10,5 +10,5 @@
     <!--<a href="#myPage" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>-->
-    <p>Copyright 2016-2016 by Ling. All Rights Reserved.</p>
+    <p>Copyright 2016 by Ling. All Rights Reserved.</p>
 </footer>

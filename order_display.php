@@ -22,6 +22,7 @@ require_once ('./default-init.php');
 require_once( './db/db-config.php');
 require_once( './db/db-operation.php');
 require_once( './api/sl_login.php');
+require ('./TrackDisplay.php');
 $track_result = array('Result'=>'', ''=> 'Records');
 //$query_url 所有订单http://ctc366.com/Member/OrderListMember.aspx
 $options = array(
@@ -33,89 +34,58 @@ $options = array(
 $context = stream_context_create($options);
 $content = file_get_html($query_url, false, $context);
 
-$htmlArray = $content->find('table[class=tableList] tr');//<table class="tableList">
+$htmlArray = $content->find('table[class=tableList] tr');
+$resultArray = array();
 if (!count($htmlArray)) {
-    $track_result['Result'] = "ERROR";
-    $track_result['Records'] = "没有定单信息";
-} else {
-    $order_display = "";
-    $order_display .= '<table class="table table-bordered table-striped">';
+}else {
     $count = 1;
+    session_start();
+    $query = new express_db();
     foreach ($htmlArray as $element) {
         if ($count != 1) {
+            $td = new TrackDisplay();
+            $td -> id = $element->children(0)->innertext;
+            $td -> trackIdCanada = $element->children(1)->innertext;
+            $td -> orderWeight = $element->children(3)->innertext;
+            $td -> orderCreateTime = $element->children(6)->innertext;
             //filter data
-            $receiver_name = $element->children(7)->innertext;
-            $receiver_phone = $element->children(8)->innertext;
-            $query = new express_db();
-            session_start();
-            if(!$query -> package_query($_SESSION['sender_id'], $receiver_name, $receiver_phone)){
+            $td -> receiverId = $_SESSION['sender_id'];
+            $td -> receiverName = $element->children(7)->innertext;
+            $td -> receiverPhone = $element->children(8)->innertext;
+            /*if(!$query -> package_query($td -> receiverId, $td -> receiverName, $td -> receiverPhone)){
                 continue;
-            }
-            $order_display .= '<tr>';
-            $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
-            $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
+            }*/
 
+            $td -> orderStatus = $element->children(9)->innertext;
+            if($td -> orderStatus == ""){
+                $td -> orderStatus = '在库';
+            }
+            $td -> orderTrack = '<a target="_blank" href="track.php?track_no=' . $td -> trackIdCanada . '">追踪</a>';
             $print_href = $element->children(10)->children(0)->href;
-            $print_id = get_id($print_href);
-            $trackNo = $element->children(1)->plaintext;
-            $order_display .= '<td>' . $element->children(2)->innertext . '</td>';
-        } else {
-            $order_display .= '<tr>';
-            $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
-            $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
-
-            $order_display .= '<td>包裹信息</td>';
+            $td -> trackId_SL = get_id($print_href);
+            $td -> orderPrint = '<a target="_blank" href="order_print.php?id=' . $td -> trackId_SL . '&track_id=' . $td -> trackIdCanada . '">打印</a>';
+            $resultArray[] = $td;
         }
-
-        $order_display .= '<td>' . $element->children(3)->innertext . '</td>';
-        //$order_display .= '<td>' . $element->children(4)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(5)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(6)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(7)->innertext . '</td>';
-        $order_display .= '<td>' . $element->children(8)->innertext . '</td>';
-
-        if ($count != 1) {
-            $child_9 = $element->children(9);
-            if($child_9->innertext == ''){
-                $order_display .= '<td>在库</td>';
-            }else{
-                $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
-            }
-        }else{
-            $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
-        }
-        if ($count != 1) {
-            $child_10 = $element->children(10)->children(0);
-            if($child_10->innertext == '编辑'){
-                $order_display .= '<td>在库</td>';
-            }else{
-                $trackNo = $element->children(1)->plaintext;
-                $order_display .= '<td><a target="_blank" href="track.php?track_no=' . $trackNo . '">追踪</a></td>';
-            }
-            $child_10 = $element->children(11)->children(0);
-            $print_href = $child_10->href;
-            $print_id = get_id($print_href);
-            $order_display .= '<td><a target="_blank" href="order_print.php?id=' . $print_id . '&track_id=' . $trackNo . '">详情</a></td>';
-        } else {
-            $order_display .= '<td></td>';
-            $order_display .= '<td></td>';
-        }
-        $order_display .= '</tr>';
         $count++;
     }
-    $order_display .= '</table>';
-    $track_result['Result'] = "OK";
-    $track_result['Records'] = $order_display;
 }
 ?>
 <div class="container-fluid">
-<?php if($track_result['Result'] == 'OK'){ ?>
-    <div class="display_all_orders" id="display_all_orders"><?php echo $track_result['Records'] ?></div>
-<?php }else{ ?>
-    <div class="track_result"><div class="track_result_fail" id="track_result_fail"><?php echo $track_result['Records']?></div></div>
-<?php } ?>
+    <table class="table table-bordered table-striped">
+        <?php if(sizeof($resultArray) == 0){
+            echo '<thead><tr></tr></thead>';
+        }else{
+            echo '<thead><tr><td>序号</td><td>订单号</td><td>重量(磅)</td><td>创建时间</td><td>收件人</td><td>收件电话</td><td>状态</td><td></td><td></td></tr></thead>';
+            echo '<tbody>';
+            foreach ($resultArray as $td) {
+                echo '<tr>';//<td>' .  . '</td>
+                echo '<td>' . $td -> id . '</td><td>' . $td -> trackIdCanada . '</td><td>' . $td -> orderWeight . '</td><td>' . $td -> orderCreateTime . '</td><td>' . $td -> receiverName . '</td><td>' . $td -> receiverPhone . '</td><td>' . $td -> orderStatus . '</td><td class="text-center">' . $td -> orderTrack . '</td><td class="text-center">' . $td -> orderPrint . '</td>';
+                echo '</tr>';
+            }
+            echo '</tbody>';
+        }?>
+    </table>
 </div>
 <?php require_once ('footer.php'); ?>
-
 </body>
 </html>

@@ -79,12 +79,7 @@ if (count($htmlArray)<=1) {
 }
 ?>
     <div class="container-fluid">
-        <?php if($track_result['Result'] == 'OK'){ ?>
-        <div class="display_all_orders" id="display_all_orders"><?php echo $track_result['Records'] ?></div>
-        <?php }else{ ?>
-        <div class="track_result"><div class="track_result_fail" id="track_result_fail"><?php echo $track_result['Records']?></div>
-        <?php } ?>
-        </div>
+        <?php echo $track_result['Records'] ?>
     </div>
 <?php require_once ('footer.php'); ?>
 </body>

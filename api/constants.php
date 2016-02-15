@@ -25,6 +25,8 @@ $edit_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.
 $edit_save_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.com/Member/OrderEditMember.aspx?ID=21004
 $query_url = 'http://ctc366.com/Member/OrderListMember.aspx';//所有定单
 $order_list_url = 'http://ctc366.com/Member/OrderListDcl.aspx';//待处理定单
+$order_list_url2 = 'http://ctc366.com/Member/OrderListDfh.aspx';//待已发货订单
+$order_list_url3 = 'http://ctc366.com/Member/OrderListYfh.aspx';//已发货订单
 $print_url = 'http://ctc366.com/adminkdUser/User/OrderViewNew.aspx?ID=';
 
 $login_name  = 'tanlingcau@163.com';

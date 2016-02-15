@@ -34,7 +34,7 @@
                 echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">MY <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="order_new.php">NEW</a></li>
+                            <li><a href="order_add.php">NEW</a></li>
                             <li><a href="#">UPDATE</a></li>
                             <li><a href="order_status.php">PRINTING</a></li>
                             <li><a href="order_display.php">TRACKING</a></li>
