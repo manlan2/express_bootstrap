@@ -73,20 +73,19 @@ if (!count($htmlArray)) {
 }
 ?>
 <div class="container-fluid">
-    <table class="table table-bordered table-striped">
-        <?php if(sizeof($resultArray) == 0){
-            echo '<thead><tr></tr></thead>';
-        }else{
-            echo '<thead><tr><td>序号</td><td>订单号</td><td>重量(磅)</td><td>创建时间</td><td>收件人</td><td>收件电话</td><td>状态</td><td></td><td></td></tr></thead>';
-            echo '<tbody>';
-            foreach ($resultArray as $td) {
-                echo '<tr>';
-                echo '<td>' . $td -> id . '</td><td>' . $td -> trackIdCanada . '</td><td>' . $td -> orderWeight . '</td><td>' . $td -> orderCreateTime . '</td><td>' . $td -> receiverName . '</td><td>' . $td -> receiverPhone . '</td><td>' . $td -> orderStatus . '</td><td class="text-center">' . $td -> orderAction . '</td><td class="text-center">' . $td -> orderPrint . '</td>';
-                echo '</tr>';
-            }
-            echo '</tbody>';
-        }?>
-    </table>
+
+    <?php if(sizeof($resultArray) == 0){
+        echo '<div class="alert alert-success text-center" role="alert">目前没有订单~</div>';
+    }else{
+        echo '<table class="table table-bordered table-striped"><thead><tr><td>序号</td><td>订单号</td><td>重量(磅)</td><td>创建时间</td><td>收件人</td><td>收件电话</td><td>状态</td><td></td><td></td></tr></thead>';
+        echo '<tbody>';
+        foreach ($resultArray as $td) {
+            echo '<tr>';
+            echo '<td>' . $td -> id . '</td><td>' . $td -> trackIdCanada . '</td><td>' . $td -> orderWeight . '</td><td>' . $td -> orderCreateTime . '</td><td>' . $td -> receiverName . '</td><td>' . $td -> receiverPhone . '</td><td>' . $td -> orderStatus . '</td><td class="text-center">' . $td -> orderAction . '</td><td class="text-center">' . $td -> orderPrint . '</td>';
+            echo '</tr>';
+        }
+        echo '</tbody></table>';
+    }?>
 </div>
 <?php require_once ('footer.php'); ?>
 </body>
