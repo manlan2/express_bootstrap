@@ -52,9 +52,9 @@ if (!count($htmlArray)) {
             $td -> receiverId = $_SESSION['sender_id'];
             $td -> receiverName = $element->children(7)->innertext;
             $td -> receiverPhone = $element->children(8)->innertext;
-            /*if(!$query -> package_query($td -> receiverId, $td -> receiverName, $td -> receiverPhone)){
+            if(!$query -> package_query($td -> receiverId, $td -> receiverName, $td -> receiverPhone)){
                 continue;
-            }*/
+            }
 
             $td -> orderStatus = $element->children(9)->innertext;
             if($td -> orderStatus == ""){
