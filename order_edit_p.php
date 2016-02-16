@@ -2,10 +2,9 @@
 /**
  * Created by PhpStorm.
  * User: simon
- * Date: 02/01/16
- * Time: 9:55 PM
+ * Date: 15/02/16
+ * Time: 11:28 PM
  */
-
 require_once( './default-init.php');
 require_once( './db/db-config.php');
 require_once( './db/db-operation.php');

@@ -59,8 +59,10 @@ if (!count($htmlArray)) {
             $td -> orderStatus = $element->children(9)->innertext;
             if($td -> orderStatus == ""){
                 $td -> orderStatus = '在库';
+                $td -> orderAction = '<a target="_blank" href="#?track_no=' . $td -> trackIdCanada . '">修改</a>';
+            }else{
+                $td -> orderAction = '<a target="_blank" href="track.php?track_no=' . $td -> trackIdCanada . '">追踪</a>';
             }
-            $td -> orderTrack = '<a target="_blank" href="track.php?track_no=' . $td -> trackIdCanada . '">追踪</a>';
             $print_href = $element->children(10)->children(0)->href;
             $td -> trackId_SL = get_id($print_href);
             $td -> orderPrint = '<a target="_blank" href="order_print.php?id=' . $td -> trackId_SL . '&track_id=' . $td -> trackIdCanada . '">打印</a>';
@@ -78,8 +80,8 @@ if (!count($htmlArray)) {
             echo '<thead><tr><td>序号</td><td>订单号</td><td>重量(磅)</td><td>创建时间</td><td>收件人</td><td>收件电话</td><td>状态</td><td></td><td></td></tr></thead>';
             echo '<tbody>';
             foreach ($resultArray as $td) {
-                echo '<tr>';//<td>' .  . '</td>
-                echo '<td>' . $td -> id . '</td><td>' . $td -> trackIdCanada . '</td><td>' . $td -> orderWeight . '</td><td>' . $td -> orderCreateTime . '</td><td>' . $td -> receiverName . '</td><td>' . $td -> receiverPhone . '</td><td>' . $td -> orderStatus . '</td><td class="text-center">' . $td -> orderTrack . '</td><td class="text-center">' . $td -> orderPrint . '</td>';
+                echo '<tr>';
+                echo '<td>' . $td -> id . '</td><td>' . $td -> trackIdCanada . '</td><td>' . $td -> orderWeight . '</td><td>' . $td -> orderCreateTime . '</td><td>' . $td -> receiverName . '</td><td>' . $td -> receiverPhone . '</td><td>' . $td -> orderStatus . '</td><td class="text-center">' . $td -> orderAction . '</td><td class="text-center">' . $td -> orderPrint . '</td>';
                 echo '</tr>';
             }
             echo '</tbody>';

@@ -7,7 +7,7 @@ $(document).ready(function () {
     get_sender_receivers();
     get_products();
 
-    /*$('#sender_select').change(function () {
+    /*$ ('#sender_select').change(function () {
         get_sender_detail();
         get_receivers();
     });*/
@@ -172,7 +172,7 @@ function save_receiver(){
             success: function( resp ) {
             },
             error: function() {
-                show_contact();
+                show_website_error();
             }
         });
     }else{
@@ -192,7 +192,7 @@ function save_receiver(){
             success: function( resp ) {
             },
             error: function() {
-                show_contact();
+                show_website_error();
             }
         });
     }
@@ -226,13 +226,13 @@ function submit_data(){
         success: function( resp ) {
             //$('#order_load').hide();
             if(resp.Result == "ERROR"){
-                show_contact();
+                show_error('提交订单失败,请联系下修女岛代理处解决~');
             }else{
                 window.location.href = "order_status.php";
             }
         },
         error: function() {
-            show_contact();
+            show_website_error();
         }
     });
 }

@@ -40,7 +40,7 @@ $print_body = <<<EOD
                 <td style="position: relative; height: 104px;" colspan="4">
 
                     <div style="position: absolute; left: 5px; top: 15px;">胜隆国际快运<br>www.ctc366.com<br>514-771-0000</div>
-                    <div style="position: absolute; left: 250px; top:15px;">M<br>昕<br>4389265767</div>
+                    <div style="position: absolute; left: 200px; top:15px;">M<br>昕<br>4389265767<br>http://express.panda2ici.com</div>
                     <img style="position: absolute; right: 10px; top: 5px;" class="btnPrint" src="http://ctc366.com/code128.aspx?num=$print_track_id">
                     <span style="position: absolute; letter-spacing: 10px; right: 10px; right: 60px; font-weight: bold; bottom: 10px;">*$print_track_id*</span>
                 </td>

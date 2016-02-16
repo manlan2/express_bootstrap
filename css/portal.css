@@ -118,7 +118,7 @@ h4 {
     background-color: #f4511e;
     z-index: 9999;
     border: 0;
-    font-size: 12px !important;
+    font-size: 17px !important;
     line-height: 1.42857143 !important;
     letter-spacing: 4px;
     border-radius: 0;
@@ -189,4 +189,8 @@ footer .glyphicon {
     padding: 15px;
     margin: 0 auto;
     position: relative;
+}
+
+.nav-font{
+    font-size: 15px;
 }

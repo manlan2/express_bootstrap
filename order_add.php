@@ -623,6 +623,10 @@
     </table>
     <input type="button" name="btnTJ" value="创建" id="btnTJ" class="btnAdd"/>
 </div>
+
+</div>
+<div class="container-fluid">
+<?php require ('model.php');?>
 </div>
 <?php require_once ('footer.php'); ?>
 </body>

@@ -32,4 +32,5 @@ class TrackDisplay
     var $orderPrint;
     var $orderTrack;
     var $orderUpdate;
+    var $orderAction;
 }

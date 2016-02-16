@@ -14,32 +14,31 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Ling</a>
+            <a class="navbar-brand" href="index.php">Panda2ici</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ABOUT <span
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">关于 <span
                             class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="services.php">SERVICES</a></li>
-                        <li><a href="pricing.php">PRICING</a></li>
-                        <li><a href="member.php">MEMBER</a></li>
-                        <li><a href="about.php">ABOUT</a></li>
+                    <ul class="dropdown-menu nav-font">
+                        <li><a href="services.php">服务</a></li>
+                        <li><a href="pricing.php">价格</a></li>
+                        <li><a href="member.php">成为会员</a></li>
+                        <li><a href="about.php">关于</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="contact.php">联系我</a></li>
+                <li><a href="track.php">查单</a></li>
                 <?php
                 session_start();
                 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">MY <span
+                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">会员 <span
                                 class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="order_add.php">NEW</a></li>
-                            <li><a href="#">UPDATE</a></li>
-                            <li><a href="order_status.php">PRINTING</a></li>
-                            <li><a href="order_display.php">TRACKING</a></li>
+                        <ul class="dropdown-menu nav-font">
+                            <li><a href="order_add.php">网上下单</a></li>
+                            <li><a href="order_display.php">已下订单</a></li>
                             <li><a href="receiver.php">收件人</a></li>
-                            <li><a href="profile.php">PROFILE</a></li>';
+                            <li><a href="profile.php">我的信息</a></li>';
                 if (isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
                     echo '<li><a href="track_xyj.php">西游寄跟单</a></li>
                                 <li><a href="#">西游寄下单</a></li>';
@@ -47,19 +46,17 @@
             </ul>
             </li>
             <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 99) {
-                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ADMIN <span
+                echo '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">管理员 <span
                                     class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="a_order_display.php">TRACKING</a></li>
-                                <li><a href="a_order_status.php">MANAGING</a></li>
-                                <li><a href="a_sender.php">SENDER</a></li>
-                                <li><a href="a_receiver.php">RECEIVER</a></li>
-                                <li><a href="a_product.php">PRODUCT</a></li>
+                            <ul class="dropdown-menu nav-font">
+                                <li><a href="a_order_display.php">订单跟踪</a></li>
+                                <li><a href="a_sender.php">发件人</a></li>
+                                <li><a href="a_receiver.php">收件人</a></li>
+                                <li><a href="a_product.php">产品库</a></li>
                             </ul>
                         </li>';
             }
             } ?>
-            <li><a href="track.php">TRACKING</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {

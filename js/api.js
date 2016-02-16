@@ -1,26 +1,19 @@
-/**
- * Created by Ling on 2016-01-18.
- */
-function show_error( content ){
-    var d = dialog({
-        width: 300,
-        title: '错误',
-        content: content,
-        cancel: false,
-        ok: function () {}
-    });
-    d.show();
+function show_model(header, content ){
+    $("#modelHead").text(header);
+    $("#modelContent").text(content);
+    $("#myModal").modal();
 }
 
-function show_contact(){
-    var d = dialog({
-        width: 300,
-        title: '网站错误',
-        content: '网站遇到了一个技术性的错误，联系下修女岛代收处解决下～',
-        cancel: false,
-        ok: function () {}
-    });
-    d.show();
+function show_info(header, content ){
+    show_model('提示', content);
+}
+
+function show_error( content ){
+    show_model('错误', content);
+}
+
+function show_website_error( ){
+    show_model('错误', '似乎网站遇到一个问题,请联系下修女岛代理处解决~');
 }
 
 function is_empty(input ) {
