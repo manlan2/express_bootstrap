@@ -13,8 +13,6 @@
     <?php require_once ('head-meta.php'); ?>
     <link href="css/portal.css" rel="stylesheet" type="text/css">
     <link href="css/add_order.css" rel="stylesheet" type="text/css">
-    <script src="js/api.js"></script>
-    <script src="js/order_add.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <?php require_once ('menu.php'); ?>
@@ -629,5 +627,7 @@
 <?php require ('model.php');?>
 </div>
 <?php require_once ('footer.php'); ?>
+<script src="js/api.js"></script>
+<script src="js/order_add.js"></script>
 </body>
 </html>
