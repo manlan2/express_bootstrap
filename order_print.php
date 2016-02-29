@@ -160,7 +160,7 @@ $print_head = <<<EOD
         {
             margin-top: 20px;
             margin-bottom:20px;
-            height: 300px;
+            height: 270px;
             float:left;
         }
 
@@ -196,6 +196,23 @@ $print_head = <<<EOD
 </head>
 <body>
 EOD;
+$print_track_no = <<<EOD
+<div class="part">
+    <table style="height: 100px;border: none;">
+        <tbody>
+            <tr>
+                <td style="position: relative; height: 34px;border: none;" colspan="4">
+                    <img style="position: absolute; left: 10px; top: 5px;" class="btnPrint" src="http://ctc366.com/code128.aspx?num=$print_track_id">
+                    <span style="position: absolute; letter-spacing: 10px; right: 10px; left: 60px; font-weight: bold; bottom: 10px;">*$print_track_id*</span>
+                    <img style="position: absolute; right: 10px; top: 5px;" class="btnPrint" src="http://ctc366.com/code128.aspx?num=$print_track_id">
+                    <span style="position: absolute; letter-spacing: 10px; right: 10px; right: 60px; font-weight: bold; bottom: 10px;">*$print_track_id*</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+EOD;
+
 $print_foot = '</body></html>';
 
-echo $print_head . $print_body . $print_body  . $print_body . $print_foot;
+echo $print_head . $print_body . $print_body  . $print_body . $print_track_no. $print_foot;
