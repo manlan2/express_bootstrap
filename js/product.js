@@ -26,7 +26,7 @@ $(document).ready(function () {
 function getProducts(){
     $('#products_div').jtable({
         paging: true, //Enable paging
-        pageSize: 10, //Set page size (default: 10)
+        pageSize: 100, //Set page size (default: 10)
         sorting: true, //Enable sorting
         defaultSorting: 'pro_barcode ASC', //Set default sorting
         title: '商品库',
@@ -66,7 +66,8 @@ function getProducts(){
             },
             pro_order_name: {
                 title: '使用名',
-                width: '5%'
+                width: '5%',
+                list: false
             },
             pro_brand_en: {
                 title: '品牌（英文）',
@@ -86,7 +87,7 @@ function getProducts(){
             },
             pro_size: {
                 title: '规格',
-                width: '3%',
+                width: '4%',
                 sorting : false,
             },
             pro_type: {
