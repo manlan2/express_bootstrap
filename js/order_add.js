@@ -161,7 +161,7 @@ function save_receiver(){
             url: "order_add_p.php",
             data: {
                 action : "save_receiver",
-                sender_id : $('#sender_select').val(),
+                sender_id : $('#hidDeliverID').val(),
                 receiver_name: $("#txtReceiverName").val(),
                 receiver_phone : $("#txtReceiverMobilePhone").val(),
                 receiver_province : $("#dropSheng").val(),
@@ -181,7 +181,7 @@ function save_receiver(){
             data: {
                 action : "update_receiver",
                 receiver_id : $('#hidReceiverID').val(),
-                sender_id : $('#sender_select').val(),
+                sender_id : $('#hidDeliverID').val(),
                 receiver_name: $("#txtReceiverName").val(),
                 receiver_phone : $("#txtReceiverMobilePhone").val(),
                 receiver_province : $("#dropSheng").val(),
