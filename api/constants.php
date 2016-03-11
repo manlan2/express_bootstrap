@@ -30,7 +30,7 @@ $order_list_url3 = 'http://ctc366.com/Member/OrderListYfh.aspx';//已发货订�
 $print_url = 'http://ctc366.com/adminkdUser/User/OrderViewNew.aspx?ID=';
 
 $login_name  = 'tanlingcau@163.com';
-$login_password = '13579246810';
+$login_password = '';
 $cookie_array = '';
 
 $button_login = '登录';
