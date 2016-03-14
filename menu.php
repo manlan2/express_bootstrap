@@ -29,6 +29,8 @@
                 </li>
                 <li><a href="contact.php">联系我</a></li>
                 <li><a href="track.php">查单</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
                 <?php
                 session_start();
                 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
@@ -57,8 +59,6 @@
                         </li>';
             }
             } ?>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
                 <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
                     echo '<li><a href="profile.php"><span>' . $_SESSION['user_name'] . ' </span></a></li><li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
                 } else {
