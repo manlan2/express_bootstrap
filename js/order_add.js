@@ -199,6 +199,7 @@ function save_receiver(){
 }
 
 function submit_data(){
+    $("#btnTJ").prop('disabled', true);
     $.ajax({
         dataType: "json",
         url: "order_add_p.php",

@@ -37,7 +37,7 @@
         <div class="col-sm-8">
             <h2>NEXT?</h2><br>
             <h4><strong>MISSION:</strong> 网上下单,跟单.简化下单步骤,节省大家的<span class="label label-danger">时间!时间!时间!</span></h4><br>
-            <h4><strong>NEXT:</strong> 提供其它快递公司的查询,无论你选不选我,我把服务先提供给你~</h4><br>
+            <!--<h4><strong>NEXT:</strong> 提供其它快递公司的查询,无论你选不选我,我把服务先提供给你~</h4><br>-->
         </div>
     </div>
 </div>
