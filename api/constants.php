@@ -23,6 +23,7 @@ $login_url = 'http://www.ctc366.com/index.aspx';
 $add_url = 'http://www.ctc366.com/Member/OrderAdd.aspx';//http://www.ctc366.com/Member/OrderAdd.aspx
 $edit_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.com/Member/OrderEditMember.aspx?ID=21004
 $edit_save_url = 'http://ctc366.com/Member/OrderEditMember.aspx?ID=';//http://ctc366.com/Member/OrderEditMember.aspx?ID=21004
+$del_url='http://ctc366.com/Member/OrderDelMember.aspx?ID=';//http://ctc366.com/Member/OrderDelMember.aspx?ID=26272
 $query_url = 'http://ctc366.com/Member/OrderListMember.aspx';//所有定单
 $order_list_url = 'http://ctc366.com/Member/OrderListDcl.aspx';//待处理定单
 $order_list_url2 = 'http://ctc366.com/Member/OrderListDfh.aspx';//待已发货订单

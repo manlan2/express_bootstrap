@@ -45,6 +45,8 @@ if (!count($htmlArray)) {
         $order_display .= '<tr>';
         $order_display .= '<td>' . $element->children(0)->innertext . '</td>';
         $order_display .= '<td>' . $element->children(1)->innertext . '</td>';
+        $trackNo = '';
+        $print_id = '';
         if ($count != 1) {
             $print_href = $element->children(10)->children(0)->href;
             $print_id = get_id($print_href);
@@ -65,24 +67,16 @@ if (!count($htmlArray)) {
             $child_9 = $element->children(9);
             if($child_9->innertext == ''){
                 $order_display .= '<td>在库</td>';
+                $order_display .= '<td><a target="_blank" href= "#">修改</a>|<a target="#" href= "#">取消</a></td>';
             }else{
                 $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
+                $order_display .= '<td><a target="_blank" href="track.php?track_no=' . $trackNo . '">追踪</a></td>';
             }
         }else{
             $order_display .= '<td>' . $element->children(9)->innertext . '</td>';
-        }
-
-        if ($count != 1) {
-            $child_10 = $element->children(10)->children(0);
-            if($child_10->innertext == '编辑'){
-                $order_display .= '<td>在库</td>';
-            }else{
-                $trackNo = $element->children(1)->plaintext;
-                $order_display .= '<td><a target="_blank" href="track.php?track_no=' . $trackNo . '">追踪</a></td>';
-            }
-        } else {
             $order_display .= '<td></td>';
         }
+
         $order_display .= '</tr>';
         $count++;
     }
