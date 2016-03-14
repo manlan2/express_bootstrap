@@ -581,7 +581,7 @@ class express_db
         $this->db_connect();
 
         //$sql = "SELECT pro_id, pro_category, pro_barcode, pro_name_en, pro_name_cn, pro_order_name, pro_brand_en, pro_brand_cn, pro_weight, pro_size, pro_type, pro_note, spare FROM EX_PRODUCT";
-        $sql = "SELECT CONCAT(pro_barcode,'-', pro_name_en, '-', pro_name_cn) AS 'label', pro_category, pro_barcode, pro_name_en, pro_name_cn, pro_brand_en, pro_size, pro_type FROM EX_PRODUCT ORDER BY pro_category ASC";
+        $sql = "SELECT CONCAT(pro_barcode,'-', pro_brand_en, '-', pro_name_en) AS 'label', pro_category, pro_barcode, pro_name_en, pro_name_cn, pro_brand_en, pro_size, pro_type FROM EX_PRODUCT ORDER BY pro_category ASC";
         $result = $this->conn->query($sql);
         $rows = array();
         while ($row = $result->fetch_assoc()) {

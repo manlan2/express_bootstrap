@@ -23,6 +23,24 @@
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
+                    <h1>参类及化妆品</h1>
+                </div>
+                <div class="panel-body">
+                    <p><strong>海参</strong></p>
+                    <p><strong>西洋参</strong></p>
+                    <p><strong>化妆品</strong></p>
+                </div>
+                <div class="panel-footer">
+                    <h3>$10~$12</h3>
+                    <h4>per LB</h4>
+                    <h3>包裹限制较多</h3>
+                    <h4>具体请咨询</h4>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-4 col-xs-12">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
                     <h1>文件证件类</h1>
                 </div>
                 <div class="panel-body">
@@ -39,7 +57,7 @@
                     <h4>其它地区</h4>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="col-sm-4 col-xs-12">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
@@ -48,9 +66,7 @@
                 <div class="panel-body">
                     <p><strong>保健品</strong></p>
                     <p><strong>奶粉</strong></p>
-                    <p><strong>衣物</strong></p>
-                    <p><strong>包包</strong></p>
-                    <p><strong>日常用品</strong></p>
+                    <p><strong>衣物包包</strong></p>
                 </div>
                 <div class="panel-footer">
                     <h3>$4.88</h3>
@@ -66,14 +82,12 @@
                     <h1>特殊物品</h1>
                 </div>
                 <div class="panel-body">
-                    <p><strong>海参</strong></p>
-                    <p><strong>西洋参</strong></p>
                     <p><strong>电子产品</strong></p>
-                    <p><strong>化妆品</strong></p>
-                    <p><strong>名贵物品</strong></p>
+                    <p><strong>超尺寸物品</strong></p>
+                    <p><strong>液体制品</strong></p>
                 </div>
                 <div class="panel-footer">
-                    <h3>$4.88~$12</h3>
+                    <h3>$4.88+</h3>
                     <h4>per LB</h4>
                     <h3>$?</h3>
                     <h4>具体请咨询</h4>

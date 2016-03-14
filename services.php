@@ -36,7 +36,7 @@
             <p>免费打包,免费纸箱</p>
         </div>
     </div>
-    <br><br>
+    <!--<br><br>
     <div class="row">
 
         <div class="col-sm-4">
@@ -54,7 +54,7 @@
             <h4>其它</h4>
             <p>其它的需要帮忙的联系我看看~能帮自然则帮~</p>
         </div>
-    </div>
+    </div>-->
 </div>
 
 <?php require_once ('footer.php'); ?>

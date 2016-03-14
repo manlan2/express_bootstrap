@@ -60,7 +60,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']) {
-                    echo '<li><a href="logout.php"><span>' . $_SESSION['user_name'] . ' </span><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
+                    echo '<li><a href="profile.php"><span>' . $_SESSION['user_name'] . ' </span></a></li><li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>';
                 } else {
                     echo '<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>';
                 } ?>
