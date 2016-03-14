@@ -38,7 +38,7 @@ if(isset($_POST['user_name']) && isset($_POST['user_password'])){
         $_SESSION['sender_id'] = $user_obj['sender_id'];
         $_SESSION['sender_name'] = $user_obj['sender_name'];
         $_SESSION['sender_phone'] = $user_obj['sender_phone'];
-        header('Location:index.php');
+        header('Location:order_display.php');
     } else {
         ?>
         <div id="login" class="jumbotron text-center">

@@ -59,10 +59,8 @@ if (!count($htmlArray)) {
             $td -> orderStatus = $element->children(9)->innertext;
             if($td -> orderStatus == ""){
                 $td -> orderStatus = '在库';
-                $td -> orderAction = '<a target="_blank" href="#?track_no=' . $td -> trackIdCanada . '">修改</a>';
-            }else{
-                $td -> orderAction = '<a target="_blank" href="track.php?track_no=' . $td -> trackIdCanada . '">追踪</a>';
             }
+            $td -> orderAction = '<a target="_blank" href="track.php?track_no=' . $td -> trackIdCanada . '">追踪</a>';
             $print_href = $element->children(10)->children(0)->href;
             $td -> trackId_SL = get_id($print_href);
             $td -> orderPrint = '<a target="_blank" href="order_print.php?id=' . $td -> trackId_SL . '&track_id=' . $td -> trackIdCanada . '">打印</a>';
