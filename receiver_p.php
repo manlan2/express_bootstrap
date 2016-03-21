@@ -19,11 +19,13 @@ if(isset($_GET["action"]) && $_GET["action"] == "get_receivers_page"){
 }else if(isset($_GET["action"]) && $_GET["action"] == "create_receiver") {
     $data = file_get_contents('php://input');
     parse_str($data);
-    $query -> receiver_insert($sender_id, $receiver_name, $receiver_phone, $receiver_province, $receiver_city, $receiver_address);
+    session_start();
+    $query -> receiver_insert($_SESSION['sender_id'], $receiver_name, $receiver_phone, $receiver_province, $receiver_city, $receiver_address);
 }else if(isset($_GET["action"]) && $_GET["action"] == "update_receiver"){
     $data = file_get_contents('php://input');
     parse_str($data);
-    $query -> receiver_update($receiver_id, $sender_id, $receiver_name, $receiver_phone, $receiver_province, $receiver_city, $receiver_address);
+    session_start();
+    $query -> receiver_update($receiver_id, $_SESSION['sender_id'], $receiver_name, $receiver_phone, $receiver_province, $receiver_city, $receiver_address);
 }else if(isset($_GET["action"]) && $_GET["action"] == "del_receiver"){
     $data = file_get_contents('php://input');
     parse_str($data);
