@@ -44,15 +44,15 @@ if (!count($htmlArray)) {
     foreach ($htmlArray as $element) {
         if ($count != 1) {
             $td = new TrackDisplay();
-            $td -> id = $element->children(0)->innertext;
+            $td -> id = ($count - 1);
             $td -> trackIdCanada = $element->children(1)->innertext;
             $td -> orderWeight = $element->children(3)->innertext;
             $td -> orderCreateTime = $element->children(6)->innertext;
             //filter data
-            $td -> receiverId = $_SESSION['sender_id'];
+            $td -> senderId = $_SESSION['sender_id'];
             $td -> receiverName = $element->children(7)->innertext;
             $td -> receiverPhone = $element->children(8)->innertext;
-            if(!$query -> package_query($td -> receiverId, $td -> receiverName, $td -> receiverPhone)){
+            if(!$query -> package_query($td -> senderId, $td -> receiverName, $td -> receiverPhone)){
                 continue;
             }
 
