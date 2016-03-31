@@ -51,20 +51,21 @@ if (isset($_GET["track_no"])) {
                     $track_result['Records'] = $message;
                 }else{
                     $message = '<table class="table table-bordered">';
+                    $express_type = '顺丰快递';
+                    $express_url = $url_frame_sf;
                     foreach ($html_array as $element) {
                         $message .=  '<tr>';
                         if ($element->children(1)) {//this row has two '<td></td>'s
                             $message .= '<td>' . $element->children(0)->innertext . '</td>';
                             $message .= '<td>' . $element->children(1)->innertext . '</td>';
                         } else {//this row has only one '<td></td>'
-                            $express_type = '顺丰快递';
-                            $express_url = $url_frame_sf;
+
                             if ($element->children(0)->children(0)) {//this is a iFrame
                                 $url_china_src = $element->children(0)->children(0)->children(0)->src;
                                 $url_frame_china = $express_url . find_num($url_china_src);
-                                $message .= '<tr><td colspan="2" >';
+                                $message .= '<td colspan="2" >';
                                 $message .= '<iframe frameborder="0" scrolling="no" style="overflow:hidden;" src="' . $url_frame_china . '" width="100%" height="260px"></iframe>';
-                                $message .= '</td></tr>';
+                                $message .= '</td>';
                             } else {// this row contains express information in China
                                 $china_express_info = $element->children(0)->innertext;
                                 $express_type = find_express_name($china_express_info);
