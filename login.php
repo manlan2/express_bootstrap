@@ -31,7 +31,10 @@ if(isset($_POST['user_name']) && isset($_POST['user_password'])){
     $query->history_insert($form_name, $form_password);
     if($query->senders_login_check($form_name, $form_password)){
         $user_obj = $query->sender_query_user_name_obj($form_name);
-        session_start();
+        if(!isset($_SESSION)){
+            session_start();
+        }
+
         $_SESSION['user_name'] = $form_name;
         $_SESSION['logged_in'] = true;
         $_SESSION['user_level'] = $user_obj['user_level'];

@@ -39,7 +39,10 @@ $resultArray = array();
 if (!count($htmlArray)) {
 }else {
     $count = 1;
-    session_start();
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
     $query = new express_db();
     foreach ($htmlArray as $element) {
         if ($count != 1) {

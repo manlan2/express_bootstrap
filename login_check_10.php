@@ -7,7 +7,10 @@
  */
 ?>
 <?php
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
+
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] && isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
 
 }else{
