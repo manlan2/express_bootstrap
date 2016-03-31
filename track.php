@@ -53,18 +53,27 @@ if (isset($_GET["track_no"])) {
                     $message = '<table class="table table-bordered">';
                     foreach ($html_array as $element) {
                         $message .=  '<tr>';
-                        if ($element->children(1)) {
+                        if ($element->children(1)) {//this row has two '<td></td>'s
                             $message .= '<td>' . $element->children(0)->innertext . '</td>';
                             $message .= '<td>' . $element->children(1)->innertext . '</td>';
-                        } else {
-                            if ($element->children(0)->children(0)) {
-                                $url_china_src = $element->children(0)->children(0)->children(0)->src;;
-                                $url_frame_china = $url_frame . find_num($url_china_src);
+                        } else {//this row has only one '<td></td>'
+                            $express_type = '顺丰快递';
+                            $express_url = $url_frame_sf;
+                            if ($element->children(0)->children(0)) {//this is a iFrame
+                                $url_china_src = $element->children(0)->children(0)->children(0)->src;
+                                $url_frame_china = $express_url . find_num($url_china_src);
                                 $message .= '<tr><td colspan="2" >';
                                 $message .= '<iframe frameborder="0" scrolling="no" style="overflow:hidden;" src="' . $url_frame_china . '" width="100%" height="260px"></iframe>';
                                 $message .= '</td></tr>';
-                            } else {
-                                $message .= '<td colspan="2">' . $element->children(0)->innertext . '</td>';
+                            } else {// this row contains express information in China
+                                $china_express_info = $element->children(0)->innertext;
+                                $express_type = find_express_name($china_express_info);
+                                if($express_type == '顺丰快递'){
+                                    $express_url = $url_frame_sf;
+                                }else if($express_type == '天天快递'){
+                                    $express_url = $url_frame;
+                                }
+                                $message .= '<td colspan="2">' . $china_express_info . '</td>';
                             }
                         }
                         $message .=  '</tr>';
