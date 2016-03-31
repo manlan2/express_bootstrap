@@ -43,7 +43,7 @@
                             <li><a href="profile.php">我的信息</a></li>';
                 if (isset($_SESSION['user_level']) && $_SESSION['user_level'] >= 10) {
                     echo '<li><a href="track_xyj.php">西游寄跟单</a></li>
-                                <li><a href="#">西游寄下单</a></li>';
+                                <li><a href="order_add_xyj.php">西游寄下单</a></li>';
                 } ?>
             </ul>
             </li>
