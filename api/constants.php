@@ -18,6 +18,7 @@ $track_xyj = "http://ex.xiyoug.com/ajax/GetTransPackorderInfo?id=";
 $track_url_china = 'http://www.ctc366.com/select/frame.aspx?KuaidiName=tiantian&OtherNum=';
 
 $url_frame = 'http://www.ctc366.com/select/frame.aspx?KuaidiName=tiantian&OtherNum=';
+$url_frame_sf = 'http://www.ctc366.com/select/frame.aspx?KuaidiName=shunfeng&OtherNum=';
 
 $login_url = 'http://www.ctc366.com/index.aspx';
 $add_url = 'http://www.ctc366.com/Member/OrderAdd.aspx';//http://www.ctc366.com/Member/OrderAdd.aspx

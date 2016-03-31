@@ -33,31 +33,40 @@ $lblSafeFree = $content->find('#lblSafeFree', 0);//lblSafeFree
 $lblNote = $content->find('#lblNote', 0);//lblNote
 $date = date("Y-m-d");
 
-$print_body = <<<EOD
-    <div class="part">
-        <table class="tableX">
-            <tbody><tr>
-                <td style="position: relative; height: 104px;" colspan="4">
+/*
+ * <td style="position: relative; height: 104px;" colspan="4">
 
                     <div style="position: absolute; left: 5px; top: 15px;">胜隆国际快运<br>www.ctc366.com<br>514-778-2222</div>
                     <div style="position: absolute; left: 200px; top:15px;">M<br>谭:514-550-5767<br>http://express.panda2ici.com</div>
                     <img style="position: absolute; right: 10px; top: 5px;" class="btnPrint" src="http://ctc366.com/code128.aspx?num=$print_track_id">
                     <span style="position: absolute; letter-spacing: 10px; right: 10px; right: 60px; font-weight: bold; bottom: 10px;">*$print_track_id*</span>
                 </td>
+ */
+$print_body = <<<EOD
+    <div class="part">
+        <table class="tableX">
+            <tbody>
+            <tr>
+                <td colspan="4" style="position: relative; height: 104px;">
+                    <img style="position: absolute; left: 5px; top: 7px;" src="/img/sl.png">
+                    <div style="position: absolute; left: 320px; top:2px;"><br><br>M<br>谭:514-550-5767<br><div style="font-size:14px;">express.panda2ici.com</div></div>
+                    <img style="position: absolute; right: 10px; top: 5px;" class="btnPrint" src="http://ctc366.com/code128.aspx?num=$print_track_id" alt="$print_track_id">
+                    <span style="position: absolute; letter-spacing: 10px; right: 10px; right: 60px; font-weight: bold; bottom: 10px;">*$print_track_id*</span>
+                </td>
             </tr>
             <tr style="height:27px;">
                 <td style="width: 25%;">
-                    <b>发件人：</b><span id="txtDeliverFirstName">$sender_name</span>
+                    <b>发件人/FROM：</b><span id="txtDeliverFirstName">$sender_name</span>
                 </td>
                 <td style="width: 25%;">
-                    <b>电话：</b>
+                    <b>电话/PHONE：</b>
                     <span id="txtDeliverTelePhone">$sender_phone</span>
                 </td>
                 <td style="width: 25%;">
-                    <b>收件人：</b><span id="txtReceiverFirstName">$receiver_name</span>
+                    <b>收件人/TO：</b><span id="txtReceiverFirstName">$receiver_name</span>
                 </td>
                 <td style="width: 25%;">
-                    <b>电话：</b>
+                    <b>电话/PHONE：</b>
                     <span id="txtReceiverTelePhone">$receiver_phone</span>
                 </td>
             </tr>
@@ -67,29 +76,29 @@ $print_body = <<<EOD
                 </td>
                 <td style="width: 50%;" colspan="2">
                     <div style="float: left;">
-                        <b>地址：</b><span id="txtReceiverAddress">$receiver_address</span>
+                        <b>地址/ADDRESS：</b><span id="txtReceiverAddress">$receiver_address</span>
                     </div>
                 </td>
             </tr>
             <tr style="height:27px;">
                 <td style="width: 25%;">
-                    <b>重量(磅)：</b><span id="lblWeight">$lblWeight</span>
+                    <b>重量(磅)/WEIGHT：</b><span id="lblWeight">$lblWeight</span>
                 </td>
                 <td style="width: 25%;">
-                    <b>保险：</b><span id="lblSafeFree">$lblSafeFree</span>
+                    <b保险/ASSURANCE：</b><span id="lblSafeFree">$lblSafeFree</span>
                 </td>
             </tr>
             <tr style="height:27px;">
                 <td colspan="2" style="width: 50%;">
-                    <b>备注：</b><span id="lblNote">$lblNote</span>
+                    <b>备注/NOTE：</b><span id="lblNote">$lblNote</span>
                 </td>
             </tr>
             <tr style="height:27px;">
                 <td style="width: 50%;" colspan="2">
-                    <b>寄件人签名：</b>
+                    <b>寄件人签名/SENDER'S SIGNATURE：</b>
                 </td>
                 <td style="width: 50%;" colspan="2">
-                    <b>日期：$date</b>
+                    <b>日期/DATE：$date</b>
                 </td>
             </tr>
             </tbody></table>
