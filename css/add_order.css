@@ -245,9 +245,7 @@ table.tableAdd input[type=password] {
 
 .show_content {
     border: 1px solid #dddddd;
-    float: left;
     padding: 10px;
-    width: 882px;
 }
 
 table.tableAdd table.tableDetail tr {
@@ -295,15 +293,15 @@ table.tableAdd table.tableDetail td {
 }
 
 .LeiBie {
-    width: 170px;
+    width: 100%;
 }
 
 table.tableAdd input.search_class {
-    width: 150px;
+    width: 100%;
 }
 
 table.tableAdd input[type=text].MingCheng {
-    width: 150px;
+    width: 100%;
 }
 
 table.tableAdd input[type=text].GuiGe {
@@ -311,7 +309,7 @@ table.tableAdd input[type=text].GuiGe {
 }
 
 table.tableAdd input[type=text].PinPai {
-    width: 80px;
+    width: 100%;
 }
 
 table.tableAdd input[type=text].ShuLiang {
@@ -413,4 +411,8 @@ select.showCity {
 .custom-combobox-input {
     margin: 0;
     padding: 5px 10px;
+}
+
+.fade.in{
+padding-top:100px;
 }
