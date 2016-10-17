@@ -31,7 +31,7 @@ $order_list_url2 = 'http://ctc366.com/Member/OrderListDfh.aspx';//待已发货�
 $order_list_url3 = 'http://ctc366.com/Member/OrderListYfh.aspx';//已发货订单
 $print_url = 'http://ctc366.com/adminkdUser/User/OrderViewNew.aspx?ID=';
 
-$login_name  = 'tanlingcau@163.com';
+$login_name  = '';
 $login_password = '';
 $cookie_array = '';
 
