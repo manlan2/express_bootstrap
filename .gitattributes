@@ -1,4 +1,4 @@
 # https://github.com/github/linguist#overrides
 # Use the linguist-documentation attribute to mark or unmark paths as documentation.
-css/*
-js/*
+css/* linguist-vendored
+js/* linguist-vendored
